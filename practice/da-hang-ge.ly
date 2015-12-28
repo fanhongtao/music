@@ -12,12 +12,12 @@ upper = \relative c'' {
 
   r4 g8-2( a-3 g4) r |
   r4 g8-2( a g4) r |
-  r4 a8-2( c) g4 e |
+  r4 a8-3( c-5) g4-2 e-1 |
   e4-3 c-1 d-2 r |\break
    
   r4 g8-2( a-3 g4) r |
   r4 g8-2( a-3 g4) r |
-  r4 g8-2( a-3 g4) e-1 |
+  r4 g8-2( a-3) g4 e-1 |
   d4_>-3 r c2_>-2 \bar "|."  
 }
 
