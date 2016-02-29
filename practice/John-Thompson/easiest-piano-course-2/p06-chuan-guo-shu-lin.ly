@@ -1,9 +1,5 @@
 \version "2.18.2"
 
-\header {
-  title = "穿过树林"
-}
-
 upper = \relative c'' {
   \clef treble
   \key c \major
@@ -38,7 +34,22 @@ lower = \relative c {
   r4 r4 \bar "|."
 }
 
+\paper {
+  print-all-headers = ##t
+}
+
+\header {
+  title = "八 分 音 符"
+  subtitle = "三四拍子"
+}
+\markup { \vspace #1 }
+
 \score {
+  \header {
+    title = "穿过树林"
+    subtitle = ##f
+    composer = "威尔士民歌"
+  }
   \new PianoStaff <<
     \set PianoStaff.instrumentName = #"Piano  "
     \new Staff = "upper" \upper
@@ -49,7 +60,7 @@ lower = \relative c {
 }
 
 \markuplist {
-  注：1、八分音符。
-  　　2、三四拍子。
-  　　3、最后一个小节只有两拍，因为这首小曲是从第三拍开始的。
+  注：1、这首小曲是从第三拍开始的。
+  　　2、最后一个小节只有两拍，因为这首小曲是从第三拍开始的。
+  　　3、第一小节是“不完全小节”，三四拍子，对应于“强，弱，弱”，所以是弱起，即开始的G需要弹得轻一些。
 }
