@@ -1,34 +1,23 @@
 \version "2.18.2"
 
-up-double-quaver = \markup {
-  \combine
-    \combine
-      \note-by-number #2 #0 #UP
-      \override #'(line-join-style . bevel)
-      \path #.4
-         #'((moveto   1.16   3)
-            (lineto   4.34   3)
-            (closepath))
-    \concat {
-      \hspace #3
-      \note-by-number #2 #0 #UP
-    }
-}
-
-down-double-quaver = \markup {
-  \combine
-    \combine
-      \note-by-number #2 #0 #DOWN
-      \override #'(line-join-style . bevel)
-      \path #.4
-         #'((moveto   0   -3)
-            (lineto   3.14   -3)
-            (closepath))
-    \concat {
-      \hspace #3
-      \note-by-number #2 #0 #DOWN
-    }
-}
+#(define-markup-command (eznotes layout props mus) (ly:music?)
+   (interpret-markup layout props
+     #{
+       \markup {
+         \score {
+           \new RhythmicStaff { #mus }
+           \layout {
+             \context {
+               \RhythmicStaff
+               \remove Clef_engraver
+               \remove Time_signature_engraver
+               \remove Staff_symbol_engraver
+             }
+             indent = 0
+           }
+         }
+       }
+     #}))
 
 upper = \relative c'' {
   \clef treble
@@ -71,7 +60,7 @@ lower = \relative c {
   subtitle = "二四拍子"
 }
 \markup { \vspace #1 }
-\markup { 当两个音符这样连接在一起时（\up-double-quaver 或 \down-double-quaver)， 它们被称为八分音符。一拍中有两个八分音符。}
+\markup { 当两个音符这样连接在一起时（\eznotes ##{ { c8[ c] } #} 或 \eznotes ##{ { c8_[ c] } #})， 它们被称为八分音符。一拍中有两个八分音符。}
 \markup { \vspace #1 }
 
 \score {
@@ -89,5 +78,5 @@ lower = \relative c {
 }
 
 \markup {
-    注：\note-by-number #3 #0 #UP + \note-by-number #3 #0 #UP = \up-double-quaver = \note-by-number #2 #0 #UP
+    注：\note-by-number #3 #0 #UP + \note-by-number #3 #0 #UP = \eznotes ##{ { c8[ c] } #} = \note-by-number #2 #0 #UP
 }
