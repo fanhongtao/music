@@ -5,4 +5,8 @@
 | ------ | ---------- |
 | [p05-zhuo-ren-you-xi.ly](p05-zhuo-ren-you-xi.ly) | 在 markup 中显示相连的8分音符 |
 | [p09-shi-ge-xiao-yin-di-an-ren.ly](p09-shi-ge-xiao-yin-di-an-ren.ly) | 歌词根据高音谱或低音谱的音符来排列 |
+| [p11-zhong-sheng-xiang-le.ly](p11-zhong-sheng-xiang-le.ly) | 升记号 (sharp pitch) |
+| [p12-tai-yang-sheng-qi.ly](p12-tai-yang-sheng-qi.ly) | 降记号 (flat pitch) |
+| [p14-san-zhi-xia-lao-shu.ly](p14-san-zhi-xia-lao-shu.ly) | 1.连线(tie)<br> 2.全休止符(Full measure rests)，即整小节休止<br> 3.音符增加注释 |
+| [p24-cong-qian.ly](p24-cong-qian.ly) | 还原记号 (flat pitch) 及 在标题中显示特殊字符|
 
