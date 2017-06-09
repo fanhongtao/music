@@ -6,14 +6,25 @@ upper = \relative c'' {
   \key c \major
   \time 4/4
   \numericTimeSignature
+  \override Glissando.style = #'dashed-line
   
-  r4 c,-1 c'_2_\markup { \halign #-0.5 左手跨越 } c, |
-  r4 c-1 c'2_2_\markup { \halign #-0.5 左手跨越 } |
+  r4 s4 c_2_\markup { \halign #-0.5 左手跨越 } c, \glissando |
+  << 
+    { \change Staff = "lower" c,4_5 \glissando }
+    \new Voice { r4 }
+  >>
+  \change Staff = "upper"
+  c'-1 c'2_2_\markup { \halign #-0.5 左手跨越 } |
   c,8[ d] ees[ f] g4 g |
   c8-1[ d] ees[ f] g2 |\break
   
-  r4 c,, c'_2_\markup { \halign #-0.5 左手跨越 } c, |
-  r4 c c'2_2_\markup { \halign #-0.5 左手跨越 } |
+  r4 s4 c,_2_\markup { \halign #-0.5 左手跨越 } c, \glissando |
+  << 
+    { \change Staff = "lower" c,4 \glissando }
+    \new Voice { r4 }
+  >>
+  \change Staff = "upper"
+  c' c'2_2_\markup { \halign #-0.5 左手跨越 } |
   g'8-5[ f] ees[ d] c4 c |
   g8-5[ f] ees[ d] c2 |\bar"|."
 }
@@ -23,18 +34,29 @@ lower = \relative c {
   \key c \major
   \time 4/4
   \numericTimeSignature
-
-  c4_5 r4 s4 r4 |
-  c4_5 r4 s2 |
-  c8_5[ d] ees[ f] g4 g |
+  \override Glissando.style = #'dashed-line
+  
+  c4_5 \glissando
+  << 
+    { \change Staff = "upper" c'4-1 }
+    \new Voice { r4 }
+  >>
+  \change Staff = "lower" s4 r4 |
+  s4 r4 s2 |
+  c,8_5[ d] ees[ f] g4 g |
   \clef "treble"
   c8_5[ d] ees[ f] g2 |\break
   
   \clef "bass"
-  c,,4 r4 s4 r4 |
-  c4 r4 s2 |
+  c,,4  \glissando 
+  << 
+    { \change Staff = "upper" c'4-1 }
+    \new Voice { r4 }
+  >>
+  \change Staff = "lower" s4 r4 |
+  s4 r4 s2 |
   \clef "treble"
-  g''8_1[ f] ees[ d] c4 c |
+  g'8_1[ f] ees[ d] c4 c |
   \clef "bass"
   g8_1[ f] ees[ d] c2 |\bar"|."
 }
@@ -64,3 +86,4 @@ lower = \relative c {
 }
 
 
+%% see http://lilypond.org/doc/v2.18/Documentation/notation/expressive-marks-as-lines
