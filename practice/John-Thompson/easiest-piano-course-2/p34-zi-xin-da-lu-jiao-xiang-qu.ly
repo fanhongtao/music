@@ -94,4 +94,5 @@ lower = \relative c {
 \markup { 详见 http://lilypond.org/doc/v2.18/Documentation/notation/displaying-pitches 中的 Ottava brackets }
 \markup { 2. 简化 simultaneous expression （多个音同时按下）的写法 }
 \markup { 详见 http://lilypond.org/doc/v2.18/Documentation/learning/combining-notes-into-chords }
+\markup { 3. 字母 q 的说明见 http://lilypond.org/doc/v2.18/Documentation/notation/single-voice }
 
