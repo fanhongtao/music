@@ -1,24 +1,27 @@
 \version "2.18.2"
 
-#(define-markup-command (eznotes layout props mus) (ly:music?)
-   (interpret-markup layout props
-     #{
-       \markup {
-         \score {
-           \new RhythmicStaff { #mus }
-           \layout {
-             \context {
-               \RhythmicStaff
-               \remove Clef_engraver
-               \remove Time_signature_engraver
-               \remove Staff_symbol_engraver
-             }
-             indent = 0
-           }
-         }
-       }
-     #}))
-
+#(define-markup-command (ezscore layout props mus) (ly:music?)
+  #:properties ((size 0))
+  (interpret-markup layout props
+    #{
+      \markup {
+        \score {
+          \new RhythmicStaff { $mus }
+          \layout {
+            \context {
+              \RhythmicStaff
+              \remove Clef_engraver
+              \remove Time_signature_engraver
+              \omit StaffSymbol
+              fontSize = #size
+              \override StaffSymbol.staff-space = #(magstep size)
+              \override StaffSymbol.thickness = #(magstep size)
+            }
+            indent = 0
+          }
+        }
+      }
+    #}))
 upper = \relative c'' {
   \clef treble
   \key c \major
@@ -60,7 +63,7 @@ lower = \relative c {
   subtitle = "二四拍子"
 }
 \markup { \vspace #1 }
-\markup { 当两个音符这样连接在一起时（\eznotes ##{ { c8[ c] } #} 或 \eznotes ##{ { c8_[ c] } #})， 它们被称为八分音符。一拍中有两个八分音符。}
+\markup { 当两个音符这样连接在一起时（\ezscore ##{ { c8[ c] } #} 或 \ezscore ##{ { c8_[ c] } #})， 它们被称为八分音符。一拍中有两个八分音符。}
 \markup { \vspace #1 }
 
 \score {
@@ -78,5 +81,5 @@ lower = \relative c {
 }
 
 \markup {
-    注：\note-by-number #3 #0 #UP + \note-by-number #3 #0 #UP = \eznotes ##{ { c8[ c] } #} = \note-by-number #2 #0 #UP
+    注：\note-by-number #3 #0 #UP + \note-by-number #3 #0 #UP = \ezscore ##{ { c8[ c] } #} = \note-by-number #2 #0 #UP
 }
