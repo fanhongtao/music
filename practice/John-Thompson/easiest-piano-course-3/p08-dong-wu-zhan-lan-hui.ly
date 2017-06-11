@@ -7,7 +7,8 @@ upper = \relative c'' {
   \numericTimeSignature
   \tempo "Allegretto 小快板"
   
-  \partial 4 d,4_.-2 |
+  \once \override DynamicText.X-offset = #-5.2
+  \partial 4 d,4_.-2\mp  |
   d4_. d_. d_. |
   e4_.-3 e_. b_. |
   d2._2 |
