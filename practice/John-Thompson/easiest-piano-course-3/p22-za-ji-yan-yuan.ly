@@ -8,23 +8,45 @@ upper = \relative c'' {
   \tempo "Allegro animato 生气勃勃的快板"
   
   R2 |
-  c,8-2[ d] e[ f] |
-  <c^2 e-4>4_. <c e>_. |
-  <c e>2 |\break
+  s2 |
+  s2 |
+  <c, e>2 |\break
   
-  e8-4[\mf\> f] e[ d]\! |
-  c8-2 s r4 |
-  r4 d-3_. |
+  e8-4\mf(\>[ f] e[ d]\! |
+  c8-2
+  <<
+    {
+      \change Staff = lower
+      bes8_2 a[ g] |
+      f4) bes_2-. |
+    }
+    \new Voice {
+      s8 r4 |
+      r4 d-3_. |
+    }
+  >>
+  \change Staff = upper
   c2 |\break
   
   R2 |
-  c8-2[ d] e[ f] |
-  <c e>4_. q_. |
+  s2 |
+  s2 |
   <c e>2 |\break
   
-  e8-4[ f] e[ d] |
-  c8-2 s r4 |
-  r4 d-3_. |
+  e8-4([ f] e[ d] |
+  c8-2
+  <<
+    {
+      \change Staff = lower
+      bes8_2 a[ g] |
+      f4) bes_2-. |
+    }
+    \new Voice {
+      s8 r4 |
+      r4 d-3_. |
+    }
+  >>
+  \change Staff = upper
   <c^2 f-5>2 |\bar"|."
 }
 
@@ -36,24 +58,44 @@ lower = \relative c {
   \dynamicUp
   % \override Hairpin.to-barline = ##f
   
-  f8_5[\mp\< g] a[ bes]\! |
-  R2 |
-  bes4_2-. bes-. |
+  f8_5\mp(\<[ g] a[ bes]\! |
+  <<
+    {
+      \change Staff = upper
+       c8-2[ d] e[ f] |
+       <c^2 e-4>4_.) <c e>_. |
+    }
+    \new Voice {
+      R2 |
+      bes4_2-. bes-. |
+    }
+  >>
+  \change Staff = lower
   bes2 |\break
   
   R2 |
-  s8 bes_2 a[ g] |
-  f4 bes_2-. |
+  s2 |
+  s2 |
   a2 |\break
   
-  f8_5[\mf\< g] a[ bes]\! |
-  R2 |
-  bes4-. bes-. |
+  f8_5\mf(\<[ g] a[ bes]\! |
+  <<
+    {
+      \change Staff = upper
+       c8-2[ d] e[ f] |
+       <c e>4_.) <c e>_. |
+    }
+    \new Voice {
+      R2 |
+      bes4-. bes-. |
+    }
+  >>
+  \change Staff = lower
   bes2 |\break
   
   R2 |
-  s8 bes_2 a[ g] |
-  f4 bes_2-. |
+  s2 |
+  s2 |
   a2_3 |\bar"|."
 }
 
