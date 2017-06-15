@@ -30,6 +30,7 @@ upper = \relative c'' {
     c2.-1 |
     f2.-4 |
     d2.-1 |
+    \set melismaBusyProperties = #'()
     g2-4 f4-3( |
     e4-2) e e |\break
     
@@ -95,6 +96,39 @@ lower = \relative c {
   \bar"|."
 }
 
+text = \lyricmode {
+  Last |
+  night as I |
+  rode o'er the |
+  prai-rie, |
+  And |\break
+  
+  looked at the |
+  stars in the |
+  sky. __ |
+  I |
+  won- dered if |
+  ev- er a |\break
+  
+  cow-boy |
+  Would |
+  drift to that |
+  sweet by- and- |
+  by. __ |
+  |\break
+  
+  Roll |
+  on, |
+  roll |
+  on, roll |
+  on lit- tle |\break
+  
+  do- gies, roll |
+  on, roll |
+  on. |
+  on.
+}
+
 \header {
   title = "牛 仔 之 歌"
 }
@@ -102,9 +136,11 @@ lower = \relative c {
 
 \score {
   \new GrandStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
+    \new Staff = "upper" { \new Voice = "uppervoice" \upper }
+    \new Staff = "lower" { \new Voice = "lowervoice" \lower }
+    \new Lyrics \with { alignBelowContext = "upper" } \lyricsto "uppervoice" \text
   >>
   \layout { }
   \midi { }
 }
+
