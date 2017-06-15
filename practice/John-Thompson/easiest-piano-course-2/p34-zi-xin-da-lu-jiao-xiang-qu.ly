@@ -49,9 +49,7 @@ lower = \relative c {
   q1 |
   <g e c>1 |
   
-  \set Staff.ottavation = #"8vb"
-  \once \override Staff.OttavaBracket.direction = #DOWN
-  \set Voice.middleCPosition = #(+ 6 7)
+  \ottava #-1
   c,4 _\markup {
     \halign #0.2
     \column { 
@@ -59,8 +57,7 @@ lower = \relative c {
       \line { 记号，表示要低八度弹奏。 }
     }
   }
-  \unset Staff.ottavation
-  \unset Voice.middleCPosition
+  \ottava 0
   r4 r2 |\bar"|."
 }
 
