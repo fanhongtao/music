@@ -7,6 +7,8 @@ upper = \relative c'' {
   \tempo "Allegro animato 生气勃勃的快板"
   
   \override DynamicText.X-offset = #-5.2
+  \set melismaBusyProperties = #'()
+  
   \partial 4. d,8-1_.[\mf r d]( |
   g4.-4) g8_.[ r g8_.] |
   g8_.[ r g8]( fis8_3)[ r g]( |
@@ -56,6 +58,27 @@ lower = \relative c {
   g8_5-. r r \bar"|."
 }
 
+text = \lyricmode {
+  How d'ye |
+  do, Mis -- ter |
+  John -- son, how d'ye |
+  do? _ _ _
+  How d'ye |\break
+  
+  do, Mis -- ter |
+  John -- son, how d'ye | 
+  do? _ _ _
+  We are |\break
+  
+  with you to a |
+  man, we'll do |
+  ev -- 'ry -- thing we |
+  can. How d’ye |
+  do, Mis -- ter |
+  John -- son, how d'ye |
+  do? 
+}
+
 \header {
   title = "你 好 吗？"
 }
@@ -63,8 +86,9 @@ lower = \relative c {
 
 \score {
   \new GrandStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
+    \new Staff = "upper" { \new Voice = "uppervoice" \upper }
+    \new Staff = "lower" { \new Voice = "lowervoice" \lower }
+    \new Lyrics \with { alignBelowContext = "upper" } \lyricsto "uppervoice" \text
   >>
   \layout { }
   \midi { }
