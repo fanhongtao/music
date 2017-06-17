@@ -32,8 +32,8 @@ upper = \relative c'' {
   e2. |
   c4 r r |
   R2. |
-  bes2.-2~ |
-  bes4 r r |\bar"|."
+  s2. |
+  s2. |\bar"|."
 }
 
 lower = \relative c {
@@ -68,9 +68,14 @@ lower = \relative c {
   f4_2)\> r f( |
   g4) r g_1( |
   e4_3)\! r g_2\p( |
-  a4_1^\markup { \italic "rit." }) r g_2 |
-  R2. |
-  R2. |\bar"|."
+  a4_1^\markup { \italic "rit." }) r g_2( |
+  <<
+    {
+      \change Staff = upper
+       bes2.-2~) | bes4 r r
+    }
+    \new Voice { R2. | R2. }
+  >> |\bar"|."
 }
 
 
