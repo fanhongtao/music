@@ -5,21 +5,14 @@ upper_one = \relative c'' {
   \clef treble
   \key c \major
   \time 2/4
-
   \phrasingSlurUp
-  e,4-3\( e |
+  
+  e,4-3\(^\markup { \halign #-9.5 \abs-fontsize #12 第一乐句 } e |
   g4-5 c,-1 |
   d8-2 e f4 |
   e2\) |\break
-}
-
-upper_two =  \relative c'' {
-  \clef treble
-  \key c \major
-  \time 2/4
-  \phrasingSlurUp
   
-  e,8-3\( [ f] e [ f] |
+  e8-3\(^\markup { \halign #-10 \abs-fontsize #12 第二乐句 } [ f] e [ f] |
   g4 c, |
   d8 e d4 |
   c2\) |\bar "|."
@@ -34,12 +27,6 @@ lower_one = \relative c {
   e2_3 |
   g2 |
   c,2 |\break
-}
-
-lower_two = \relative c {
-  \clef bass
-  \key c \major
-  \time 2/4
   
   c2_5 |
   e2 |
@@ -52,43 +39,25 @@ lower_two = \relative c {
 }
 
 \header {
-  title = ##f
-  subtitle = \markup { \abs-fontsize #20 "乐    句" }
+  title = "乐    句"
+  subtitle = ##f
 }
 \markup { \vspace #1 }
-
-
-\layout {
-  indent = 0\cm
-  ragged-last = ##f
-}
 
 \score {
   \header {
     title = "旋律"
-    subtitle = "第一乐句"
+    subtitle = ##f
   }
   \new PianoStaff <<
     \new Staff = "upper" \upper_one
     \new Staff = "lower" \lower_one
   >>
-}
-
-\score {
-  \header {
-    subtitle = "第二乐句"
-  }
   \layout {
-    \context {
-      \Staff
-      \omit KeySignature
-      \omit TimeSignature
-    }
+    indent = 0\cm
+    ragged-last = ##f
   }
-  \new PianoStaff <<
-    \new Staff = "upper" \upper_two
-    \new Staff = "lower" \lower_two
-  >>
+  \midi { } 
 }
 
 \markup { 音乐像说话一样，被划分成一个一个句子，不过音乐的句子叫做乐句。 }
@@ -115,5 +84,3 @@ lower_two = \relative c {
   }
 }
 
-\markup { \vspace #1 }
-\markup { 由于全局的 title 会的各个 score 中都显示，所以这里使用 subtitle 来显示标题（“乐句”二字）。 }
