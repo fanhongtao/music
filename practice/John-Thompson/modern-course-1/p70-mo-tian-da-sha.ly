@@ -8,9 +8,9 @@ upper = \relative c'' {
   \override Hairpin.to-barline = ##f
   
   s2.\mf |
-  s4 c,4-1 ees-3 |
-  \stemDown aes4_3 \stemUp c-1 ees-3 |
-  \ottava #1 \stemDown aes4_3 \stemUp c-1 ees-3 | \break
+  s4 c,4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 |
+  \ottava #1 \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 | \break
   
   \stemNeutral << des2.-2\p ees2.-3 >> |
   << des2.-2 ees2.-3 >> |
@@ -18,9 +18,9 @@ upper = \relative c'' {
   q2. \ottava 0 |\break
   
   s2.\mf |
-  s4 c,,4-1 ees-3 |
-  \stemDown aes4_3 \stemUp c-1 ees-3 |
-  \ottava #1 \stemDown aes4_3 \stemUp c-1 ees-3 | \break
+  s4 c,,4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 |
+  \ottava #1 \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 | \break
   
   \stemNeutral << des2.-2\p ees2.-3 >> |
   << des2.-2 ees2.-3 >> |
@@ -48,9 +48,9 @@ upper = \relative c'' {
   
   \repeat volta 2 {
     s2.\mf |
-    s4 c4-1 ees-3 |
-    \stemDown aes4_3 \stemUp c-1 ees-3 |
-    \ottava #1 \stemDown  aes4_3 \stemUp c-1 ees-3 |
+    s4 c4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+    \stemDown aes4_3_左手 \stemUp c-1 ees-3 |
+    \ottava #1 \stemDown  aes4_3_左手 \stemUp c-1 ees-3 |
     \stemNeutral << des2.-2\p ees2.-3 >> |\break
     
     << des2.-2 ees2.-3 >> |
@@ -73,8 +73,8 @@ lower = \relative c {
   \key as \major
   \time 3/4
   
-  \stemDown aes4_3 \stemUp c-1 ees-3 |
-  \stemNeutral aes4_3 s2 |
+  \stemDown aes4_3 \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  \stemNeutral aes4_3_左手 s2 |
   s2. |
   s2. \clef treble |\break
   
@@ -83,8 +83,8 @@ lower = \relative c {
   aes2._3~ |
   aes2. \clef bass |\break
   
-  \stemDown aes,,,4_3 \stemUp c-1 ees-3 |
-  \stemNeutral aes4_3 s2 |
+  \stemDown aes,,,4_3 \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  \stemNeutral aes4_3_左手 s2 |
   s2. |
   s2. \clef treble |\break
   
@@ -113,8 +113,8 @@ lower = \relative c {
   q2. |\break
   
   \repeat volta 2 {
-    \stemDown aes,4_3 \stemUp c-1 ees-3 |
-    \stemNeutral aes4_3 s2 |
+    \stemDown aes,4_3 \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+    \stemNeutral aes4_3_左手 s2 |
     s2. |
     s2. \clef treble |
     g''2._4 | \break
@@ -128,7 +128,7 @@ lower = \relative c {
     }
     {
       aes2._3 |
-      \ottava #1 aes'2._3 \ottava 0 |
+      \ottava #1 aes'2._3_左手 \ottava 0 |
     }
   }
   |\bar"|."
@@ -146,6 +146,13 @@ lower = \relative c {
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
   >>
-  \layout { }
+  \layout {
+    \override TextSpanner.style = #'solid-line
+    \override TextSpanner.bound-details.left.text =
+      \markup { \draw-line #'(0 . -1) }
+    \override TextSpanner.bound-details.right.text =
+      \markup { \draw-line #'(0 . -1) }
+    \override TextSpanner.bound-details.right.padding = #-1
+  }
   \midi { }
 }
