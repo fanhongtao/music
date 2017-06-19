@@ -71,7 +71,12 @@ lower = \relative c {
   a8 f16 g a4) |\break
   
   a16_5( c_3 d4_2 f8_1 |
-  d4 c8 a) |
+  d4 c8 a)^\markup {
+    " "
+    \override #'(on . 0.6)
+    \override #'(off . 0.4)
+    \draw-dashed-line #'(4.5 . 2.8) 
+  } |
   r8 d,_5([ f g] |
   a8_1[ c_3 d f]) |
   d8( c a_1 g_2 |\break
@@ -92,3 +97,5 @@ lower = \relative c {
   \layout { }
   \midi { }
 }
+
+\markup { 注：因为 glissando 较为复杂，所以第18小节末尾的连线没有使用 glissando 来绘制，而是用 markup 拼凑了一根线 }
