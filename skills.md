@@ -1,11 +1,11 @@
 本目录下的文件用于展示 LilyPond 的一些特殊使用技巧。</br>
 所列的文件都是在其它目录下实际有的文件，可以根据文件名来查找具体的出处。
 
- > 如果文件名后带有 “(log)” 字样，建议要查看以下原文件的提交记录。
+ > 如果文件名后带有 “(source)” 字样，建议要点击“source”查看原文件的提交记录。
 
 | 文件名 | 展示的功能 |
 | ------ | ---------- |
-| [p05-zhuo-ren-you-xi.ly](p05-zhuo-ren-you-xi.ly) (log) | 在 markup 中显示相连的8分音符. |
+| [p05-zhuo-ren-you-xi.ly](p05-zhuo-ren-you-xi.ly) ([source](../practice/John-Thompson/easiest-piano-course-2/p05-zhuo-ren-you-xi.ly)) | 在 markup 中显示相连的8分音符. |
 | [p06-chuan-guo-shu-lin.ly](p06-chuan-guo-shu-lin.ly) | 不完全小节(upbeat or anacrusis) |
 | [p09-shi-ge-xiao-yin-di-an-ren.ly](p09-shi-ge-xiao-yin-di-an-ren.ly) | 歌词根据高音谱或低音谱的音符来排列 |
 | [p11-zhong-sheng-xiang-le.ly](p11-zhong-sheng-xiang-le.ly) | 升记号 (sharp pitch) |
@@ -15,5 +15,9 @@
 | [p33-hui-tiao-wu-de-xiong.ly](p33-hui-tiao-wu-de-xiong.ly) | 1. 延长记号 (fermata)<br> 2. 双音 |
 | [p34-zi-xin-da-lu-jiao-xiang-qu.ly](p34-zi-xin-da-lu-jiao-xiang-qu.ly) | 1. 低八度 (ottava bassa ??)<br> 2. simultaneous expression （多个音同时按下，如：双音）简写 |
 | [p36-lun-dun-qiao-yao-ta-le.ly](p36-lun-dun-qiao-yao-ta-le.ly) | 左手跨越的音符与右手原有音符符杆(stem)方向不同  |
-| [p37-ju-ren-de-jiao-bu.ly](p37-ju-ren-de-jiao-bu.ly)  (log) | 1. 乐曲中改变谱号(clef) <br> 2. 跨五线谱(stave) 的音符连线(glissando) |
+| [p37-ju-ren-de-jiao-bu.ly](p37-ju-ren-de-jiao-bu.ly)  ([source](../practice/John-Thompson/easiest-piano-course-2/p37-ju-ren-de-jiao-bu.ly)) | 1. 乐曲中改变谱号(clef) <br> 2. 跨五线谱(stave) 的音符连线(glissando) |
 | [p39-yin-di-an-gu.ly](p39-yin-di-an-gu.ly) | 重音记号(accent) |
+| [p04-xuan-lv.ly](p04-xuan-lv.ly) | 乐句(phrase) |
+| [p10-zai-di-an-shang.ly](p10-zai-di-an-shang.ly) | 跳跃反复(Alternative endings) |
+| [p11-ri-chu.ly](p11-ri-chu.ly) | 渐强(crescendo)、渐弱(decrescendo) 记号 |
+| [p13-huang-shu-lang-tao-pao-le.ly](p13-huang-shu-lang-tao-pao-le.ly) | 歌词(lyrics)不占用整个 slur ，而是只对应一个音符 |
