@@ -37,6 +37,7 @@ upper = \relative c'' {
   \time 3/4
   \numericTimeSignature
   \tempo "Andante M.M." 4 = 104
+  \override Glissando.style = #'dashed-line
   
   \once \override DynamicText.X-offset = #-4.2
   g4.-3\mp_\markup { \box " 第一位置 " } a8-4 g4-3 |
@@ -50,13 +51,19 @@ upper = \relative c'' {
   g2.-1 |
   a2-2 a4 |
   c4.-4 b8-3 a4-2 |
-  g4.-1 a8-2 g4-1 |
-  R2. |\break
+  g4.-1 a8-2 g4-1\glissando |
+  <<
+    { \change Staff = "lower" e2.-3 }
+    \new Voice { R2. }
+  >> \change Staff = "upper" |\break
   
   a2-2 a4-2 |
   c4.-4 b8-3 a4-2 |
-  g4.-1 a8-2 g4-1 |
-  R2. |
+  g4.-1 a8-2 g4-1\glissando |
+  <<
+    { \change Staff = "lower" e2.-3 }
+    \new Voice { R2. }
+  >> \change Staff = "upper" |
   d'2-3^\markup { \box " 第三位置 " } d4 |
   f4-5 d-3 b-1 |\break
   
@@ -86,12 +93,12 @@ lower = \relative c {
   r4 f'_2( c_5) |
   r4 f_2( c_5) |
   r4 e_3( c_5~) |
-  <e-3 c>2. |\break
+  \once \stemDown c2. |\break
   
   r4 f_2( c_5) |
   r4 f_2( c_5) |
   r4 e_3( c_5~) |
-  <e-3 c>2. |
+  \once \stemDown c2. |
   r4 \clef bass c,_5 f_2 |
   g4_1 f_2 d_4 |\break
   
