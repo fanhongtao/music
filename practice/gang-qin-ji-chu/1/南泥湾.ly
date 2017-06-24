@@ -78,12 +78,19 @@ lower = \relative c {
   g,8 d' <g_1 b,_4>4 |\bar "|."
 }
 
+myStaff = \new PianoStaff <<
+  \new Staff = "upper" \upper
+  \new Staff = "lower" \lower
+>>
+  
 \score {
-  \new PianoStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
+  \myStaff
   \layout { }
+}
+
+\score {
+  \unfoldRepeats
+  \myStaff
   \midi { }
 }
 
