@@ -141,11 +141,13 @@ lower = \relative c {
 \markup { \concat{\super \flat A}大调有四个降号: \concat{\super \flat B}、 \concat{\super \flat E}、 \concat{\super \flat A}、 \concat{\super \flat D}。 }
 \markup { \vspace #1 }
 
+myStaff = \new PianoStaff <<
+  \new Staff = "upper" \upper
+  \new Staff = "lower" \lower
+>>
+
 \score {
-  \new GrandStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
+  \myStaff
   \layout {
     \override TextSpanner.style = #'solid-line
     \override TextSpanner.bound-details.left.text =
@@ -154,5 +156,10 @@ lower = \relative c {
       \markup { \draw-line #'(0 . -1) }
     \override TextSpanner.bound-details.right.padding = #-1
   }
+}
+
+\score {
+  \unfoldRepeats
+  \myStaff
   \midi { }
 }
