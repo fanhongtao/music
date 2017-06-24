@@ -141,6 +141,13 @@ text = \lyricmode {
     \new Lyrics \with { alignBelowContext = "upper" } \lyricsto "uppervoice" \text
   >>
   \layout { }
-  \midi { }
 }
 
+\score {
+  \unfoldRepeats
+  \new PianoStaff <<
+    \new Staff = "upper" \upper
+    \new Staff = "lower" \lower
+  >>
+  \midi { }
+}

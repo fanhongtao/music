@@ -85,12 +85,19 @@ lower = \relative c {
 }
 \markup { \vspace #1 }
 
+myStaff = \new PianoStaff <<
+  \new Staff = "upper" \upper
+  \new Staff = "lower" \lower
+>>
+
 \score {
-  \new GrandStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
+  \myStaff
   \layout { }
+}
+
+\score {
+  \unfoldRepeats
+  \myStaff
   \midi { }
 }
 
