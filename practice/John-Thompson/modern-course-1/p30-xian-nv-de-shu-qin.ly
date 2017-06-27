@@ -33,7 +33,30 @@ upper_one = \relative c'' {
   q4 r r |\bar "||" 
 }
 
+upper_one_midi = \relative c'' {
+  <g-1 b^3>2.\arpeggio |
+  << g2.-1 ais2.-2\arpeggio >> |
+  <g-1 b^3>2.~\arpeggio |
+  q4 r r |
+  <g'-1 b^3>2.\arpeggio |
+  << g2.-1 ais2.-2\arpeggio >> |\break
+  
+  <g-1 b^3>2.~\arpeggio |
+  q4 r r |\bar "||" 
+}
+
 upper_two = \relative c'' {
+  <g-1 b^3>2.\arpeggio |
+  << g2.-1 ais2.-2\arpeggio >> |\break
+  <g-1 b^3>2.~\arpeggio |
+  q4 r r |
+  <g'-1 b^3>2.\arpeggio |
+  << g2.-1 ais2.-2\arpeggio >> |
+  <g-1 b^3>2.~\arpeggio |
+  q4 r r |  
+}
+
+upper_two_midi = \relative c'' {
   <g-1 b^3>2.\arpeggio |
   << g2.-1 ais2.-2\arpeggio >> |\break
   <g-1 b^3>2.~\arpeggio |
@@ -52,7 +75,8 @@ upper = \relative c'' {
   \tempo \markup { "Andante M.M. " \note-by-number #2 #0 #UP "= 60 - " \note-by-number #1 #1 #UP " = 50" }
   \override Hairpin.to-barline = ##f
   
-  \upper_one
+  \tag #'pdf  \upper_one
+  \tag #'midi \upper_one_midi
   R2. |
   g4-1 b-3 d-5 |
   <g_5 b_3>2.~_\markup{左手} |
@@ -90,11 +114,26 @@ upper = \relative c'' {
   R2. |
   a4-2\> b-3 a-2 |
   g2.-1\! |
-  \upper_two
+  \tag #'pdf  \upper_two
+  \tag #'midi \upper_two_midi
   \bar"|."
 }
 
 lower_one = \relative c {
+  \once \override DynamicText.X-offset = #0.1
+  <g'_5 d'_1>2.\arpeggio\p |
+  <g_5 cis_2>2.\arpeggio |
+  <g_5 d'_1>2.~\arpeggio |
+  q4 r r \clef treble |
+  \once \override DynamicText.X-offset = #0.1
+  <g'_5 d'_1>2.\arpeggio\pp |
+  <g_5 cis_2>2.\arpeggio |\break
+  
+  <g_5 d'_1>2.~\arpeggio |
+  q4 r r |
+}
+
+lower_one_midi = \relative c {
   \once \override DynamicText.X-offset = #0.1
   <g'_5 d'_1>2.\arpeggio\p |
   <g_5 cis_2>2.\arpeggio |
@@ -122,13 +161,28 @@ lower_two = \relative c {
   q4 r r |
 }
 
+lower_two_midi = \relative c {
+  \once \override DynamicText.X-offset = #0.1
+  <g'_5 d'_1>2.\arpeggio\p |
+  <g_5 cis_2>2.\arpeggio |\break
+  
+  <g_5 d'_1>2.~\arpeggio |
+  q4 r r \clef treble |
+  \once \override DynamicText.X-offset = #0.1
+  <g'_5 d'_1>2.\arpeggio\pp |
+  <g_5 cis_2>2.\arpeggio |
+  <g_5 d'_1>2.~\arpeggio |
+  q4 r r |
+}
+
 lower = \relative c {
   \clef bass
   \key g \major
   \time 3/4
   \dynamicUp
   
-  \lower_one
+  \tag #'pdf  \lower_one
+  \tag #'midi \lower_one_midi
   \clef bass g'4_5\mp b_3 d_1 |
   R2. |
   s2. |
@@ -166,7 +220,8 @@ lower = \relative c {
   d4_1 b_3 g_5 |
   c4_2 d_1 c_2 |
   b2._3 |
-  \lower_two
+  \tag #'pdf  \lower_two
+  \tag #'midi \lower_two_midi
   \bar"|."
 }
 
@@ -180,12 +235,22 @@ lower = \relative c {
   \header {
     title = "仙女的竖琴"
   }
+  \keepWithTag #'pdf
   \new GrandStaff <<
     \set GrandStaff.connectArpeggios = ##t
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
   >>
   \layout { }
+}
+
+\score {
+  \keepWithTag #'midi
+  \new GrandStaff <<
+    \set GrandStaff.connectArpeggios = ##t
+    \new Staff = "upper" \upper
+    \new Staff = "lower" \lower
+  >>
   \midi { }
 }
 
