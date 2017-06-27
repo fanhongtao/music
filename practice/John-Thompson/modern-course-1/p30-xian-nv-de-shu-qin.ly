@@ -34,15 +34,17 @@ upper_one = \relative c'' {
 }
 
 upper_one_midi = \relative c'' {
-  <g-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |
-  <g-1 b^3>2.~\arpeggio |
+  \set tieWaitForNote = ##t
+  \grace { s4. g8.~[ b~] } <g-1 b^3>2.\arpeggio |
+  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |
+  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
   q4 r r |
-  <g'-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |\break
+  \grace { s4. g'8.~[ b~] } <g-1 b^3>2.\arpeggio |
+  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |\break
   
-  <g-1 b^3>2.~\arpeggio |
+  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
   q4 r r |\bar "||" 
+  \unset tieWaitForNote
 }
 
 upper_two = \relative c'' {
@@ -53,18 +55,20 @@ upper_two = \relative c'' {
   <g'-1 b^3>2.\arpeggio |
   << g2.-1 ais2.-2\arpeggio >> |
   <g-1 b^3>2.~\arpeggio |
-  q4 r r |  
+  q4 r r |
 }
 
 upper_two_midi = \relative c'' {
-  <g-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |\break
-  <g-1 b^3>2.~\arpeggio |
+  \set tieWaitForNote = ##t
+  \grace { s4. g8.~[ b~] } <g-1 b^3>2.\arpeggio |
+  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |\break
+  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
   q4 r r |
-  <g'-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |
-  <g-1 b^3>2.~\arpeggio |
-  q4 r r |  
+  \grace { s4. g'8.~[ b~] } <g-1 b^3>2.\arpeggio |
+  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |
+  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
+  q4 r r |
+  \unset tieWaitForNote
 }
 
 upper = \relative c'' {
@@ -134,17 +138,19 @@ lower_one = \relative c {
 }
 
 lower_one_midi = \relative c {
+  \set tieWaitForNote = ##t
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\p |
-  <g_5 cis_2>2.\arpeggio |
-  <g_5 d'_1>2.~\arpeggio |
+  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\p |
+  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
   q4 r r \clef treble |
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\pp |
-  <g_5 cis_2>2.\arpeggio |\break
+  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\pp |
+  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |\break
   
-  <g_5 d'_1>2.~\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
   q4 r r |
+  \unset tieWaitForNote
 }
 
 lower_two = \relative c {
@@ -162,17 +168,19 @@ lower_two = \relative c {
 }
 
 lower_two_midi = \relative c {
+  \set tieWaitForNote = ##t
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\p |
-  <g_5 cis_2>2.\arpeggio |\break
+  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\p |
+  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |\break
   
-  <g_5 d'_1>2.~\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
   q4 r r \clef treble |
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\pp |
-  <g_5 cis_2>2.\arpeggio |
-  <g_5 d'_1>2.~\arpeggio |
+  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\pp |
+  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
   q4 r r |
+  \unset tieWaitForNote
 }
 
 lower = \relative c {
@@ -254,9 +262,29 @@ lower = \relative c {
   \midi { }
 }
 
+\markup { 注意： LilyPond 目前无法在 MIDI 中正确记录“琶音”(arpeggio)。}
+\markup { 所以，我使用了 tag 来区分 \underline {显示在PDF中} 和 \underline {记录在Midi中} 的内容。 }
+\markup { 同时，为了让不同代码之间不互相影响，所以将 琶音 相关的代码提取出来。 }
 
-\markup { 参考 \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/writing-rhythms#ties" {
+\markup { \vspace #1 总结琶音相关代码过程如下：}
+\markup { 1、先将代码正确录入，能够生成PDF。 }
+\markup { 2、将琶音相关代码提取出来，并确保提取后 PDF 内容正确。 }
+\markup { 3、将提取出来的代码复制一份用于生成 midi 内容； 利用 tag 来区分不同的代码。 }
+\markup { 4、修改 midi 相关代码，确保声音正确。 }
+\markup { 可以参考本文件的提交记录来加深理解。 }
+
+\markup { \vspace #1 有个小技巧：}
+\markup { 修改 midi 代码时，先将用于生成 PDF 的 score 也使用 midi 对应的 tag, }
+\markup { 即将 "\keepWithTag #'pdf" 更换成 "\keepWithTag #'midi"。这样才能确保 midi 中的音符正确。 }
+\markup { 等 midi 的内容正确后，再将 tag 更换回来。 }
+
+\markup { \vspace #1 参考: }
+\markup { 1、\with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/writing-rhythms#ties" {
     Ties
   } 中的 "Using ties with arpeggios"
 }
 
+\markup { 2、\with-url #"https://lists.nongnu.org/archive/html/lilypond-user/2011-05/msg00028.html" {
+    Re: Fw: midi arpeggio
+  }
+}
