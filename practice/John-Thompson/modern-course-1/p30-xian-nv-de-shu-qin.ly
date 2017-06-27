@@ -3,6 +3,24 @@
 
 \markup { 和弦前的\bold {曲线} 指和弦音要\bold {先后}弹出，不是一起弹。}
 
+\markup { \fill-line {
+  \score {
+    \new Staff \relative c'' {
+      \once \override Staff.TimeSignature #'stencil = ##f
+      \time 3/4
+      
+      <c, e g>2.\arpeggio |
+      
+      \set tieWaitForNote = ##t
+      \tieDown
+      \grace { c8[ ~ e ~ g] ~ s4 }
+      <c, e g>2. \bar "||"
+    }
+    \layout { }
+  }
+} }
+
+
 upper = \relative c'' {
   \clef treble
   \key g \major
@@ -59,7 +77,7 @@ upper = \relative c'' {
   g2.-1\! |
   <g-1 b^3>2.\arpeggio |
   << g2.-1 ais2.-2\arpeggio >> |\break
-  <g-1 b-3>2.~\arpeggio |
+  <g-1 b^3>2.~\arpeggio |
   q4 r r |
   <g'-1 b^3>2.\arpeggio |
   << g2.-1 ais2.-2\arpeggio >> |
@@ -73,10 +91,12 @@ lower = \relative c {
   \time 3/4
   \dynamicUp
   
+  \once \override DynamicText.X-offset = #0.1
   <g'_5 d'_1>2.\arpeggio\p |
   <g_5 cis_2>2.\arpeggio |
   <g_5 d'_1>2.~\arpeggio |
   q4 r r \clef treble |
+  \once \override DynamicText.X-offset = #0.1
   <g'_5 d'_1>2.\arpeggio\pp |
   <g_5 cis_2>2.\arpeggio |\break
   
@@ -119,11 +139,13 @@ lower = \relative c {
   d4_1 b_3 g_5 |
   c4_2 d_1 c_2 |
   b2._3 |
+  \once \override DynamicText.X-offset = #0.1
   <g_5 d'_1>2.\arpeggio\p |
   <g_5 cis_2>2.\arpeggio |\break
   
   <g_5 d'_1>2.~\arpeggio |
   q4 r r \clef treble |
+  \once \override DynamicText.X-offset = #0.1
   <g'_5 d'_1>2.\arpeggio\pp |
   <g_5 cis_2>2.\arpeggio |
   <g_5 d'_1>2.~\arpeggio |
@@ -148,3 +170,10 @@ lower = \relative c {
   \layout { }
   \midi { }
 }
+
+
+\markup { 参考 \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/writing-rhythms#ties" {
+    Ties
+  } 中的 "Using ties with arpeggios"
+}
+
