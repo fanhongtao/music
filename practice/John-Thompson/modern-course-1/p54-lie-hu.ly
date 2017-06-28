@@ -21,22 +21,22 @@ upper = \relative c'' {
   }
   
   \partial 8 r8 |
-  g4-1-. g8-1-. g4-1-. g8-1-. |
+  s2. |
   g4.-1~ g4 r8 |
-  <g-1 b^3>4-. <g-1 b^3>8-. <g-1 b^3>4-. <g-1 b^3>8-. |
+  s2. |
   <g-1 b^3>4.~ q4 r8 |\break
   
-  <g-1 d'^5>4-. <g-1 d'^5>8-. <g-1 d'^5>4-. <g-1 d'^5>8-. |
+  s2. |
   <g-1 d'^5>4. <g-1 c^4>4. |
   b4-3-. b8-3-. a4-2-. a8-2-. |
   g4.-1~ g4 r8 |\break
   
-  g4-1-. g8-1-. g4-1-. g8-1-. |
+  s2. |
   g4.-1~ g4 r8 |
-  <g-1 b^3>4-. q8-. q4-. q8-. |
+  s2. |
   q4.~ q4 r8 |\break
   
-  <g-1 d'^5>4-. q8-. q4-. q8-. |
+  s2. |
   <g-1 d'^5>4. <g-1 c^4>4. |
   b4-3-. b8-3-. a4-2-. a8-2-. |
   g4.-1~ g4 r8 |\break
@@ -57,23 +57,78 @@ lower = \relative c {
   \keyTime
   \dynamicUp
   
-  \partial 8 d'8_2\f |
-  R2. |
-  r4 r8 r4 d8_2 |
-  R2. |
-  r4 r8 r4 d8_2 |\break
+  \once \override DynamicText.X-offset = #-3.2
+  \partial 8 d'8_2\f( |
+  <<
+    {
+      \change Staff = upper
+      g4-1-.) g8-1-. g4-1-. g8-1-. |
+    }
+    \new Voice {
+      R2. |
+    }
+  >>
+  \change Staff = lower
+  r4 r8 r4 d8_2( |
+  <<
+    {
+      \change Staff = upper
+      <g-1 b^3>4-.) <g-1 b^3>8-. <g-1 b^3>4-. <g-1 b^3>8-. |
+    }
+    \new Voice {
+      R2. |
+    }
+  >>
+  \change Staff = lower
+  r4 r8 r4 d8_2( |\break
   
-  b4_4-. b8_4-. b4_4-. b8_4-. |
+  <<
+    {
+      \change Staff = upper
+      <g-1 d'^5>4-.) <g-1 d'^5>8-. <g-1 d'^5>4-. <g-1 d'^5>8-. |
+    }
+    \new Voice {
+      b,4_4-. b8_4-. b4_4-. b8_4-. |
+    }
+  >>
+  \change Staff = lower
   b4._4 e4._1-. |
   d4_2-. d8_2-. c4_3-. c8_3-. |
-  b4._4~ b4 d8_2 |\break
+  b4._4~ b4 d8_2( |\break
   
-  R2. |
-  r4 r8 r4 d8_2 |
-  R2. |
-  r4 r8 r4 d8_2 |\break
+  <<
+    {
+      \change Staff = upper
+      g4-1-.) g8-1-. g4-1-. g8-1-. |
+    }
+    \new Voice {
+      R2. |
+    }
+  >>
+  \change Staff = lower
+  r4 r8 r4 d8_2( |
+  <<
+    {
+      \change Staff = upper
+      <g-1 b^3>4-.) q8-. q4-. q8-. |
+    }
+    \new Voice {
+      R2. |
+    }
+  >>
+  \change Staff = lower
+  r4 r8 r4 d8_2( |\break
   
-  b4_4-. b8-. b4-. b8-. |
+  <<
+    {
+      \change Staff = upper
+      <g-1 d'^5>4-.) q8-. q4-. q8-. |
+    }
+    \new Voice {
+      b,4_4-. b8-. b4-. b8-. |
+    }
+  >>
+  \change Staff = lower
   b4._4 e4._1-. |
   d4_2-. d8-. c4_3-. c8-. |
   b4._4~ b4 d8_2 |\break
