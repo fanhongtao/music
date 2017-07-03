@@ -1,10 +1,13 @@
 \version "2.18.2"
 
 %%%%%%%
-% Define a makeup command to draw full PIANO keys.
+% Define makeup commands:
+%  1. fullkeys  -- to draw full PIANO keys.
+%  2. groupkeys -- to draw one group keys.
 %
 % Example
 %   \markup { \fullkeys #'2 #'10 #'1.3 #7 }
+%   \markup { \groupkeys #'2 #'10 #'1.3 #7 }
 %
 % see http://lsr.di.unimi.it/LSR/Item?id=791
 
@@ -35,4 +38,12 @@
       (make-keys-black '(1   3 4   6 7 8   10 11    13 14 15    17 18    20 21 22    24 25    27 28 29    31 32    34 35 36    38 39    41 42 43    45 46    48 49 50)  width-white  width-black  (- height-white height-black) height-black)))
 
 
+#(define-markup-command (groupkeys layout props width-white height-white width-black height-black) (number? number? number? number?) 
+    (ly:stencil-add
+      (make-line-stencil 0.1 0 0 (* 7 width-white) 0)
+      (make-line-stencil 0.1 0 height-white (* 7 width-white) height-white)
+      (make-keys-white '(1 2 3 4 5 6 7 8)  width-white   0 height-white)
+      (make-keys-black '(1 2   4 5 6)  width-white  width-black  (- height-white height-black) height-black)))
+
 % \markup { \fullkeys #'2 #'10 #'1.3 #7 }
+% \markup { \groupkeys #'2 #'10 #'1.3 #7 }
