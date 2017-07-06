@@ -21,6 +21,7 @@
 | [p10-zai-di-an-shang.ly](practice/John-Thompson/easiest-piano-course-3/p10-zai-di-an-shang.ly) | 跳跃反复(Alternative endings) |
 | [p11-ri-chu.ly](practice/John-Thompson/easiest-piano-course-3/p11-ri-chu.ly) | 渐强(crescendo)、渐弱(decrescendo) 记号 |
 | [p13-huang-shu-lang-tao-pao-le.ly](practice/John-Thompson/easiest-piano-course-3/p13-huang-shu-lang-tao-pao-le.ly) | 歌词(lyrics)不占用整个 slur ，而是只对应一个音符 |
-| [p65-hen-jiu-yi-qian.ly](practice/John-Thompson/modern-course-1/p65-hen-jiu-yi-qian.ly) | markup 中显示 score |
 | [p30-xian-nv-de-shu-qin.ly](practice/John-Thompson/modern-course-1/p30-xian-nv-de-shu-qin.ly) (log) | midi 中“正确”记录“琶音”(arpeggio) |
+| [p65-hen-jiu-yi-qian.ly](practice/John-Thompson/modern-course-1/p65-hen-jiu-yi-qian.ly) | markup 中显示 score |
+| [p70-mo-tian-da-sha.ly](practice/John-Thompson/modern-course-1/p70-mo-tian-da-sha.ly) (log) | 使用 TextSpan 分类标注音符 |
 | [南泥湾.ly](practice/gang-qin-ji-chu/1/南泥湾.ly) | Grace notes |

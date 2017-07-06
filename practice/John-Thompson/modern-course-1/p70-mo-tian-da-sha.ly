@@ -1,5 +1,9 @@
 \version "2.18.2"
 
+\include "../../../lib/brackets.ly"
+
+bracket = \squareBracket #'(0.0 . -0.0)  #'1.0
+
 upper = \relative c'' {
   \clef treble
   \key as \major
@@ -8,7 +12,7 @@ upper = \relative c'' {
   \override Hairpin.to-barline = ##f
   
   s2.\mf |
-  s4 c,4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  s4 \bracket c,4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
   \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 |
   \ottava #1 \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 | \break
   
@@ -18,7 +22,7 @@ upper = \relative c'' {
   q2. \ottava 0 |\break
   
   s2.\mf |
-  s4 c,,4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  s4 \bracket c,,4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
   \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 |
   \ottava #1 \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 | \break
   
@@ -48,7 +52,7 @@ upper = \relative c'' {
   
   \repeat volta 2 {
     s2.\mf |
-    s4 c4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+    s4 \bracket c4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
     \stemDown aes4_3_左手 \stemUp c-1 ees-3 |
     \ottava #1 \stemDown  aes4_3_左手 \stemUp c-1 ees-3 |
     \stemNeutral << des2.-2\p ees2.-3 >> |\break
@@ -73,7 +77,7 @@ lower = \relative c {
   \key as \major
   \time 3/4
   
-  \stemDown aes4_3 \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  \stemDown aes4_3 \bracket \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
   \stemNeutral aes4_3_左手 s2 |
   s2. |
   s2. \clef treble |\break
@@ -83,7 +87,7 @@ lower = \relative c {
   aes2._3~ |
   aes2. \clef bass |\break
   
-  \stemDown aes,,,4_3 \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+  \stemDown aes,,,4_3 \bracket \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
   \stemNeutral aes4_3_左手 s2 |
   s2. |
   s2. \clef treble |\break
@@ -113,7 +117,7 @@ lower = \relative c {
   q2. |\break
   
   \repeat volta 2 {
-    \stemDown aes,4_3 \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
+    \stemDown aes,4_3 \bracket \stemUp c-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
     \stemNeutral aes4_3_左手 s2 |
     s2. |
     s2. \clef treble |
