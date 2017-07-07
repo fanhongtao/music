@@ -13,7 +13,7 @@
 | [p14-san-zhi-xia-lao-shu.ly](practice/John-Thompson/easiest-piano-course-2/p14-san-zhi-xia-lao-shu.ly) | 1. 连线 (tie)<br> 2. 全休止符 (Full measure rests)，即整小节休止<br> 3. 音符增加注释 |
 | [p24-cong-qian.ly](practice/John-Thompson/easiest-piano-course-2/p24-cong-qian.ly) | 还原记号 (flat pitch) 及 在标题中显示特殊字符|
 | [p33-hui-tiao-wu-de-xiong.ly](practice/John-Thompson/easiest-piano-course-2/p33-hui-tiao-wu-de-xiong.ly) | 1. 延长记号 (fermata)<br> 2. 双音 |
-| [p34-zi-xin-da-lu-jiao-xiang-qu.ly](practice/John-Thompson/easiest-piano-course-2/p34-zi-xin-da-lu-jiao-xiang-qu.ly) | 1. 低八度 (ottava bassa ??)<br> 2. simultaneous expression （多个音同时按下，如：双音）简写 |
+| [p34-zi-xin-da-lu-jiao-xiang-qu.ly](practice/John-Thompson/easiest-piano-course-2/p34-zi-xin-da-lu-jiao-xiang-qu.ly) (log) | 1. 低八度 (ottava bassa ??)<br> 2. simultaneous expression （多个音同时按下，如：双音）简写 |
 | [p36-lun-dun-qiao-yao-ta-le.ly](practice/John-Thompson/easiest-piano-course-2/p36-lun-dun-qiao-yao-ta-le.ly) | 左手跨越的音符与右手原有音符符杆(stem)方向不同  |
 | [p37-ju-ren-de-jiao-bu.ly](practice/John-Thompson/easiest-piano-course-2/p37-ju-ren-de-jiao-bu.ly)  (log) | 1. 乐曲中改变谱号(clef) <br> 2. 跨五线谱(stave) 的音符连线(glissando) |
 | [p39-yin-di-an-gu.ly](practice/John-Thompson/easiest-piano-course-2/p39-yin-di-an-gu.ly) | 重音记号(accent) |

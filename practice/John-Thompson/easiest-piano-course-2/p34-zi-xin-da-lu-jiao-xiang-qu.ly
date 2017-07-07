@@ -32,22 +32,22 @@ lower = \relative c {
   \time 4/4
   \numericTimeSignature
 
-  <g'_1 c,_5>1 |
+  <c g'>1_1_5 |
   e1 |
   g2. f4 |
   e1 |
-  <g_1 f_2 c_5>1~ |
-  <g f c>1~ |
+  <c f g>1~_1_2_5 |
+  q1~ |
   q1 |
-  <g e c>1 |\break
+  q1 |\break
   
-  <g c,>1 |
+  <c g'>1 |
   e1 |
   g2. f4 |
   e1 |
-  <g f c>1~ |
+  <c f g>1~ |
   q1 |
-  <g e c>1 |
+  <c e g>1 |
   
   \ottava #-1
   c,4 _\markup {
@@ -76,6 +76,7 @@ lower = \relative c {
   \header {
     title = "“自新大陆”交响曲"
     subtitle = "（主题）"
+    composer = "德沃夏克"
   }
   \new GrandStaff <<
     \new Staff = "upper" \upper
