@@ -39,7 +39,12 @@ lower_hand = \relative c {
           s
           << e'_1 d_2 gis,_5-. >> \bar "||"
         }
-        \layout { }
+        \layout {
+          \context {
+            \Staff
+            \remove "Time_signature_engraver"
+          }
+        }
       }
     }
     \hspace #2
@@ -49,7 +54,9 @@ lower_hand = \relative c {
           \new Staff = "upper" \upper_hand
           \new Staff = "lower" \lower_hand
         >>
-        \layout { }
+        \layout {
+          \override Staff.TimeSignature #'stencil = ##f
+        }
       }
     }
     \hspace #1
@@ -131,3 +138,5 @@ lower = \relative c {
   \layout { }
   \midi { }
 }
+
+\markup { 注意： 在代码中使用了两种不同的方式实现不显示 TimeSignature }
