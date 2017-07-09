@@ -1,5 +1,5 @@
- \version "2.18.2"
-
+\version "2.18.2"
+% 《约翰•汤普森 简易钢琴教程 2》 P36
 
 upper = \relative c'' {
   \clef treble
@@ -29,7 +29,7 @@ upper = \relative c'' {
     { \stemDown g2.  }
     \new Voice {
       \voiceTwo
-      \stemUp g'2.^\markup { \halign #0.2 左手跨越 }
+      \stemUp g'2.^2^\markup { \halign #0.2 左手跨越 }
     }
   >>
   |\bar"|."
@@ -41,14 +41,14 @@ lower = \relative c {
   \time 3/4
   \numericTimeSignature
 
-  <d'_1 b_3 g_5>2.~ |
+  <g' b d>2._1_3_5~ |
   q2. |
   q2.~ |
   q2. |\break
   
-  <d_1 c_2 g_5>2.~ |
+  <g c d>2._1_2_5~ |
   q2. |
-  <d_1 b_3 g_5>2.~ |
+  <g b d>2._1_3_5~ |
   q2. |\break
   
   q2.~ |
@@ -56,9 +56,9 @@ lower = \relative c {
   q2.~ |
   q2. |\break
   
-  <d_1 c_2 g_5>2.~ |
+  <g c d>2._1_2_5~ |
   q2. |
-  <d_1 b_3 g_5>2. |
+  <g b d>2._1_3_5 |
   R2. |\bar"|."
 }
 

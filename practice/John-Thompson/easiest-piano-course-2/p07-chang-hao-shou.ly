@@ -1,6 +1,5 @@
 \version "2.18.2"
-
-dualNotes = << d1 f1 >>
+% 《约翰•汤普森 简易钢琴教程 2》 P07
 
 upper = \relative c'' {
   \clef treble
@@ -11,20 +10,20 @@ upper = \relative c'' {
   e,1-3 |
   e1 |
   e1 |
-  << { d1-2 } { f1-4 } >> | \break
+  <d f>1-2-4 | \break
   
-  \dualNotes |
-  \dualNotes |
-  \dualNotes |
+  q1 |
+  q1 |
+  q1 |
   e1 |
   e1 |
   e1 | \break
   
   e1 |
-  \dualNotes |
-  \dualNotes |
-  \dualNotes |
-  \dualNotes |
+  q1 |
+  q1 |
+  q1 |
+  q1 |
   e1 |\bar"|."
 }
 

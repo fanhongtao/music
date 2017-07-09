@@ -1,8 +1,5 @@
- \version "2.18.2"
-
-
-right_one = \relative c' {  << { b4 } { d }  >> }
-right_two = \relative c' {  << { c4 } { d }  >> }
+\version "2.18.2"
+% 《约翰•汤普森 简易钢琴教程 2》 P32
 
 upper = \relative c'' {
   \clef treble
@@ -11,23 +8,23 @@ upper = \relative c'' {
   \numericTimeSignature
   
   R2. |
-  r4 << { b,4-1 } { d-3 }  >> \right_one |
+  r4 <b, d>-1-3 q |
   R2. |
-  r4 << { c4-2 } { d-3 }  >> \right_two |\break
+  r4 <c d>-2-3 q |\break
   
   R2. |
-  r4 \right_two \right_two |
+  r4 q q |
   R2. |
-  r4 \right_one \right_one |
+  r4 <b d> q |
   R2. |
-  r4 \right_one \right_one |\break
+  r4 q q |\break
   
   R2. |
-  r4 \right_two \right_two |
+  r4 <c d> q |
   R2. |
-  r4 \right_two \right_two |
+  r4 q q |
   R2. |
-  r4 \right_one \right_one |\bar"|."
+  r4 <b d> q |\bar"|."
 }
 
 lower = \relative c {

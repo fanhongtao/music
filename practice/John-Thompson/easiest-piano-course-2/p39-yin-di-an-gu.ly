@@ -1,4 +1,5 @@
 \version "2.18.2"
+% 《约翰•汤普森 简易钢琴教程 2》 P39
 
 #(define-markup-command (ezscore layout props mus) (ly:music?)
   #:properties ((size 0))
@@ -41,45 +42,43 @@ upper = \relative c'' {
   a'1 |
   f4 f e f |
   d2. r4 |
-  << {d4-1} {e4-2} >> <d e> q q |
-  << {d1-1} {f1-3} >> |\break
+  <d e>4-1-2 q q q |
+  <d f>1-1-3 |\break
   
-  << {d4-1} {e4-2} >> <d e> q q |
-  <d-1 f-3>1 |
+  <d e>4-1-2 q q q |
+  <d f>1-1-3 |
   d1 |
   a'1 |
   f4 f e f |
   d2. r4 |\bar"|."
 }
 
-left-one = \relative c' { <a-> d,>4 q q q }
-left-two = \relative c' { <a-> d,>4 q q r }
 lower = \relative c {
   \clef bass
   \key c \major
   \time 4/4
   \numericTimeSignature
   
-  { <a'->_1 d,_5>4 q q q } |
-  \left-one |
-  \left-one |
-  \left-one |
-  \left-one |
-  \left-two |\break
+  <d g>_1_5-> q q q |
+  q-> q q q |
+  q-> q q q |
+  q-> q q q |
+  q-> q q q |
+  q-> q q r |\break
   
-  \left-one |
-  \left-one |
-  \left-one |
-  \left-two |
-  bes1->_2 |
+  q-> q q q |
+  q-> q q q |
+  q-> q q q |
+  q-> q q r |
+  bes'1->_2 |
   a4->_1 d,_5 d d |\break
   
   bes'1->_2 |
   a4-> d, d d |
-  \left-one |
-  \left-one |
-  \left-one |
-  \left-two |\bar"|."
+  q-> q q q |
+  q-> q q q |
+  q-> q q q |
+  q-> q q r |\bar"|."
 }
 
 

@@ -1,5 +1,5 @@
- \version "2.18.2"
-
+\version "2.18.2"
+% 《约翰•汤普森 简易钢琴教程 2》 P35
 
 upper = \relative c'' {
   \clef treble
@@ -24,15 +24,15 @@ lower = \relative c {
   \time 4/4
   \numericTimeSignature
 
-  <c'_1 a_3 f_5>1 |
+  <f a c>1_1_3_5 |
   q1 |
-  <c_1 bes_2 f_5>1 |
+  <f bes c>1_1_2_5 |
   q1 |\break
   
-  <c a f>1 |
+  <f a c>1 |
   q1 |
-  <c bes f>1 |
-  <c a f>1 |\bar"|."
+  <f bes c>1 |
+  <f a c>1 |\bar"|."
 }
 
 

@@ -1,6 +1,5 @@
- \version "2.18.2"
-
-left_tone = \relative c {  << { g'1 } { c, }  >> }
+\version "2.18.2"
+% 《约翰•汤普森 简易钢琴教程 2》 P23
 
 upper = \relative c'' {
   \clef treble
@@ -25,15 +24,15 @@ lower = \relative c {
   \time 4/4
   \numericTimeSignature
 
-  << { g'1_1 } { c,_5 }  >> |
-  \left_tone |
-  \left_tone |
-  \left_tone |\break
+  <c g'>1_1_5 |
+  q1 |
+  q1 |
+  q1 |\break
   
-  \left_tone |
-  \left_tone |
-  \left_tone |
-  \left_tone |\bar"|."
+  q1 |
+  q1 |
+  q1 |
+  q1 |\bar"|."
 }
 
 
