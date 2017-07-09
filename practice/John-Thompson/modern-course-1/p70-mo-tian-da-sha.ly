@@ -1,4 +1,5 @@
 \version "2.18.2"
+% 《约翰•汤普森 现代钢琴教程 1》 P70
 
 \include "../../../lib/brackets.ly"
 
@@ -16,9 +17,9 @@ upper = \relative c'' {
   \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 |
   \ottava #1 \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 | \break
   
-  \stemNeutral << des2.-2\p ees2.-3 >> |
-  << des2.-2 ees2.-3 >> |
-  <ees-3 c^1>2.~ |
+  \stemNeutral <des ees>2.-2-3\p |
+  q2.-2-3 |
+  <c ees>2.-1-3~ |
   q2. \ottava 0 |\break
   
   s2.\mf |
@@ -26,46 +27,46 @@ upper = \relative c'' {
   \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 |
   \ottava #1 \stemDown aes4_3_左手 \stemUp c-1^右手 ees-3 | \break
   
-  \stemNeutral << des2.-2\p ees2.-3 >> |
-  << des2.-2 ees2.-3 >> |
-  <ees-3 c^1>2.~ |
+  \stemNeutral <des ees>2.-2-3 |
+  q2.-2-3 |
+  <c ees>2.-1-3~ |
   q2. \ottava 0 |\break
   
   \ottava #1 c2-1\pp des4-2 |
   c2-1 des4-2 |
-  <ees-3 c^1>2.~ |
+  <c ees>2.-1-3~ |
   q2. \ottava 0 |
   c,2-1\p des4-2 |
   c2-1 des4-2 | \break
   
-  <ees-3 c^1>2.~ |
+  <c ees>2.-1-3~ |
   q2. |
   c,2-1\mf des4-2 |
   c2-1 des4-2 |
-  <ees-3 c^1>2.\< |
-  <ees-3 c^1>2.\! |\break
+  <c ees>2.-1-3\< |
+  q2.-1-3\! |\break
   
-  <e-4 c^1>2.~ |
+  <c e>2.-1-4~ |
   q2.\> |
-  << des2.-2~ ees!2.-3~ >> |
-  << des2.\! ees2. >> |\break
+  <des ees!>2.-2-3~ |
+  <des ees>2.\! |\break
   
   \repeat volta 2 {
     s2.\mf |
     s4 \bracket c4-1\startTextSpan^\markup { 右手 } ees-3\stopTextSpan |
     \stemDown aes4_3_左手 \stemUp c-1 ees-3 |
     \ottava #1 \stemDown  aes4_3_左手 \stemUp c-1 ees-3 |
-    \stemNeutral << des2.-2\p ees2.-3 >> |\break
+    \stemNeutral <des ees>2.-2-3\p |\break
     
-    << des2.-2 ees2.-3 >> |
+    q2.-2-3 |
   }
   \alternative {
     {
-      <ees-3 c^1>2.~ |
+      <c ees>2.-1-3~ |
       q2. \ottava 0 |
     }
     {
-      \ottava #1 <ees-3 c^1>2.~\pp |
+      \ottava #1 <c ees>2.-1-3~\pp |
       q2. \ottava 0 |
     }
   }
@@ -97,23 +98,23 @@ lower = \relative c {
   aes2._3~ |
   aes2. |\break
   
-  <aes_3 f_5>2. |
-  <aes_3 f_5>2. |
+  <f aes>2._3_5 |
+  q2._3_5 |
   aes2._3~ |
   aes2. |
-  <aes,_3 f_5>2. |
-  <aes_3 f_5>2. |\break
+  <f, aes>2._3_5 |
+  q2._3_5 |\break
   
   aes2._3~ |
   aes2. \clef bass |
-  <aes,_3 f_5>2. |
-  <aes_3 f_5>2. |
+  <f, aes>2._3_5 |
+  q2._3_5 |
   aes2._3 |
   aes2._3 |\break
   
-  <bes_2 g_4>2.~ |
+  <g bes>2._2_4~ |
   q2. |
-  <bes_2 g_4>2.~ |
+  q2._2_4~ |
   q2. |\break
   
   \repeat volta 2 {

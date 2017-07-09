@@ -22,51 +22,51 @@
 
 
 upper_one = \relative c'' {
-  <g-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |
-  <g-1 b^3>2.~\arpeggio |
+  <g b>2.-1-3\arpeggio |
+  <g ais>2.-1-2\arpeggio |
+  <g b>2.-1-3~\arpeggio |
   q4 r r |
-  <g'-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |\break
+  <g' b>2.-1-3\arpeggio |
+  <g ais>2.-1-2\arpeggio |\break
   
-  <g-1 b^3>2.~\arpeggio |
+  <g b>2.-1-3~\arpeggio |
   q4 r r |\bar "||" 
 }
 
 upper_one_midi = \relative c'' {
   \set tieWaitForNote = ##t
-  \grace { s4. g8.~[ b~] } <g-1 b^3>2.\arpeggio |
-  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |
-  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
+  \grace { s4. g8.~[ b~] } <g b>2.-1-3\arpeggio |
+  \grace { s4. g8.~[ ais~] } <g ais>2.-1-2\arpeggio |
+  \grace { s4. g8.~[ b~] } <g b>2.-1-3~\arpeggio |
   q4 r r |
-  \grace { s4. g'8.~[ b~] } <g-1 b^3>2.\arpeggio |
-  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |\break
+  \grace { s4. g'8.~[ b~] } <g b>2.-1-3\arpeggio |
+  \grace { s4. g8.~[ ais~] } <g ais>2.-1-2\arpeggio |\break
   
-  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
+  \grace { s4. g8.~[ b~] } <g b>2.-1-3~\arpeggio |
   q4 r r |\bar "||" 
   \unset tieWaitForNote
 }
 
 upper_two = \relative c'' {
-  <g-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |\break
-  <g-1 b^3>2.~\arpeggio |
+  <g b>2.-1-3\arpeggio |
+  <g ais>2.-1-2\arpeggio |\break
+  <g b>2.-1-3~\arpeggio |
   q4 r r |
   <g'-1 b^3>2.\arpeggio |
-  << g2.-1 ais2.-2\arpeggio >> |
-  <g-1 b^3>2.~\arpeggio |
+  <g ais>2.-1-2\arpeggio |
+  <g b>2.-1-3~\arpeggio |
   q4 r r |
 }
 
 upper_two_midi = \relative c'' {
   \set tieWaitForNote = ##t
-  \grace { s4. g8.~[ b~] } <g-1 b^3>2.\arpeggio |
-  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |\break
-  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
+  \grace { s4. g8.~[ b~] } <g b>2.-1-3\arpeggio |
+  \grace { s4. g8.~[ ais~] } <g ais>2.-1-2\arpeggio |\break
+  \grace { s4. g8.~[ b~] } <g b>2.-1-3~\arpeggio |
   q4 r r |
-  \grace { s4. g'8.~[ b~] } <g-1 b^3>2.\arpeggio |
-  \grace { s4. g8.~[ ais~] } << g2.-1 ais2.-2\arpeggio >> |
-  \grace { s4. g8.~[ b~] } <g-1 b^3>2.~\arpeggio |
+  \grace { s4. g'8.~[ b~] } <g b>2.-1-3\arpeggio |
+  \grace { s4. g8.~[ ais~] } <g ais>2.-1-2\arpeggio |
+  \grace { s4. g8.~[ b~] } <g b>2.-1-3~\arpeggio |
   q4 r r |
   \unset tieWaitForNote
 }
@@ -83,12 +83,12 @@ upper = \relative c'' {
   \tag #'midi \upper_one_midi
   R2. |
   g4-1 b-3 d-5 |
-  <g_5 b_3>2.~_\markup{左手} |
+  <g b>2._2_5~_\markup{左手} |
   q4 r r |\break
   
   R2. |
   g,4-1 b-3 d-5 |
-  <g_5 b_3>2.~_\markup{左手} |
+  <g b>2._3_5~_\markup{左手} |
   q4 r r |
   a,4-2\mp b-3 a-2 |
   g4-1 b-3 d-5 |\break
@@ -102,12 +102,12 @@ upper = \relative c'' {
   
   R2. |
   g4-1\< b-3 d-5\! |
-  <g_5 b_3>2.~_\markup{左手} |
+  <g b>2._3_5~_\markup{左手} |
   q4 r r |
   R2. |
   g,4-1 b-3 d-5 |\break
   
-  <g_5 b_3>2.~_\markup{左手} |
+  <g b>2._3_5~_\markup{左手} |
   q4 r r |
   a,4-2\< b-3 a-2\! |
   c4-4 b-3 a-2 |
@@ -125,60 +125,60 @@ upper = \relative c'' {
 
 lower_one = \relative c {
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\p |
-  <g_5 cis_2>2.\arpeggio |
-  <g_5 d'_1>2.~\arpeggio |
+  <g' d'>2._1_5\arpeggio\p |
+  <g cis>2._2_5\arpeggio |
+  <g d'>2._1_5~\arpeggio |
   q4 r r \clef treble |
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\pp |
-  <g_5 cis_2>2.\arpeggio |\break
+  <g' d'>2._1_5\arpeggio\pp |
+  <g cis>2._2_5\arpeggio |\break
   
-  <g_5 d'_1>2.~\arpeggio |
+  <g d'>2._1_5~\arpeggio |
   q4 r r |
 }
 
 lower_one_midi = \relative c {
   \set tieWaitForNote = ##t
   \once \override DynamicText.X-offset = #0.1
-  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\p |
-  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |
-  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
+  \grace { g'8.~[ d'~] s4. } <g, d'>2._1_5\arpeggio\p |
+  \grace { g8.~[ cis~] s4. } <g cis>2._2_5\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g, d'>2._1_5~\arpeggio |
   q4 r r \clef treble |
   \once \override DynamicText.X-offset = #0.1
-  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\pp |
-  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |\break
+  \grace { g'8.~[ d'~] s4. } <g, d'>2._1_5\arpeggio\pp |
+  \grace { g8.~[ cis~] s4. } <g cis>2._2_5\arpeggio |\break
   
-  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g, d'>2._1_5~\arpeggio |
   q4 r r |
   \unset tieWaitForNote
 }
 
 lower_two = \relative c {
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\p |
-  <g_5 cis_2>2.\arpeggio |\break
+  <g' d'>2._1_5\arpeggio\p |
+  <g cis>2._2_5\arpeggio |\break
   
-  <g_5 d'_1>2.~\arpeggio |
+  <g d'>2._1_5~\arpeggio |
   q4 r r \clef treble |
   \once \override DynamicText.X-offset = #0.1
-  <g'_5 d'_1>2.\arpeggio\pp |
-  <g_5 cis_2>2.\arpeggio |
-  <g_5 d'_1>2.~\arpeggio |
+  <g' d'>2._1_5\arpeggio\pp |
+  <g cis>2._2_5\arpeggio |
+  <g d'>2._1_5~\arpeggio |
   q4 r r |
 }
 
 lower_two_midi = \relative c {
   \set tieWaitForNote = ##t
   \once \override DynamicText.X-offset = #0.1
-  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\p |
-  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |\break
+  \grace { g'8.~[ d'~] s4. } <g, d'>2._1_5\arpeggio\p |
+  \grace { g8.~[ cis~] s4. } <g cis>2._2_5\arpeggio |\break
   
-  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g, d'>2._1_5~\arpeggio |
   q4 r r \clef treble |
   \once \override DynamicText.X-offset = #0.1
-  \grace { g'8.~[ d'~] s4. } <g,_5 d'_1>2.\arpeggio\pp |
-  \grace { g8.~[ cis~] s4. } <g_5 cis_2>2.\arpeggio |
-  \grace { g8.~[ d'~] s4. } <g,_5 d'_1>2.~\arpeggio |
+  \grace { g'8.~[ d'~] s4. } <g, d'>2._1_5\arpeggio\pp |
+  \grace { g8.~[ cis~] s4. } <g cis>2._2_5\arpeggio |
+  \grace { g8.~[ d'~] s4. } <g, d'>2._1_5~\arpeggio |
   q4 r r |
   \unset tieWaitForNote
 }

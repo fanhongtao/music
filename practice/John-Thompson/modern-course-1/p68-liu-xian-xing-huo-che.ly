@@ -57,28 +57,28 @@ lower = \relative c {
   s1^加速 |
   s1 |\break
   
-  r2 <e'_3 c_5>2 |
+  r2 <c' e>2_3_5 |
   r2 q |
-  r2 <f_2 c_5> |
-  r2 <e_3 c_5> |\break
+  r2 <c f>_2_5 |
+  r2 <c e>_3_5 |\break
   
-  r2 <e_3 c_5> |
+  r2 <c e>_3_5 |
   r2 q |
-  r2 <f_2 c_5> |
+  r2 <c f>_2_5 |
   e2_3 r |\break
   
-  << f2_2 e2_3 >> <f e>4. q8 |
+  <e f>2_2_3 q4. q8 |
   q4 r r2 |
-  << f2_2 e2_3 >> <f e>4. q8 |
+  q_2_3 q4. q8 |
   q4 r r2 |\break
   
-  r2 <f_2 c_5> |
-  r2 <e_3 c_5> |
-  r2 <f_2 c_5> |
+  r2 <c f>_2_5 |
+  r2 <c e>_3_5 |
+  r2 <c f>_2_5 |
   e4_3 r r2 |\break
   
-  r2 <e_3 c_5> |
-  r2 <e_3 c_5> |
+  r2 <c e>_3_5 |
+  r2 q_3_5 |
   s1^火车开始减速 |
   s1 |\break
   

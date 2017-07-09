@@ -47,35 +47,35 @@ lower = \relative c {
   \time 4/4
   \numericTimeSignature
   
-  <a'_3 f_5>2 <a_3 f_5>4-. <a_3 f_5>-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <a_3 f_5>2 q4-. q-. |\break
+  <f a>2_3_5 q4_3_5-. q_3_5-. |
+  <f bes>2_2_5 q4-. q-. |
+  q2_2_5 q4-. q-. |
+  <f a>2_3_5 q4-. q-. |\break
   
-  <a_3 f_5>2 q4-. q-. |
+  <f a>2_3_5 q4-. q-. |
   g2_4 c4_1-. g_4-. |
   b2_2 g4_4-. b_2-. |
   r4 bes!_2-. a_3-. g_4-. |\break
   
-  <a_3 f_5>2 q4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <a_3 f_5>2 q4-. q-. |\break
+  <f a>2_3_5 q4-. q-. |
+  <f bes>2_2_5 q4-. q-. |
+  q2_2_5 q4-. q-. |
+  <f a>2_3_5 q4-. q-. |\break
   
-  <a_3 f_5>2 q4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <a_3 f_5>2 q4-. q-. |\break
+  <f a>2_3_5 q4-. q-. |
+  <f bes>2_2_5 q4-. q-. |
+  q2_2_5 q4-. q-. |
+  <f a>2_3_5 q4-. q-. |\break
   
-  <bes_2 f_5>2 q4-. q-. |
-  <a_3 f_5>2 q4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <a_3 f_5>2 q4-. q-. |\break
+  <f bes>2_2_5 q4-. q-. |
+  <f a>2_3_5 q4-. q-. |
+  <f bes>2_2_5 q4-. q-. |
+  <f a>2_3_5 q4-. q-. |\break
   
-  <bes_2 f_5>2 <a_3 f_5>4-. q-. |
-  <bes_2 f_5>2 <a_3 f_5>4-. q-. |
-  <bes_2 f_5>2 q4-. q-. |
-  <a_3 f_5>1 |\bar"|."
+  <f bes>2_2_5 <f a>4_3_5-. q-. |
+  <f bes>2_2_5 <f a>4_3_5-. q-. |
+  <f bes>2_2_5 q4-. q-. |
+  <f a>1_3_5 |\bar"|."
 }
 
 \header {

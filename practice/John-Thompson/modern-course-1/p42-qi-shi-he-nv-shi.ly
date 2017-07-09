@@ -35,9 +35,9 @@ lower_hand = \relative c {
         \relative c {
           \clef bass 
           \key a \major
-          <a'_5 cis_3 e_1>4
+          <a' cis e>4_1_3_5
           s
-          << e'_1 d_2 gis,_5-. >> \bar "||"
+          <gis d' e>_1_2_5 \bar "||"
         }
         \layout {
           \context {
@@ -100,25 +100,25 @@ lower = \relative c {
   \dynamicUp
   
   \partial 2 r2 |
-  <a'_5 cis_3 e_1>4-. r << e'_1 d_2 gis,_5-. >> r |
-  <a_5 cis_3 e_1>2 r |
-  <a_5 cis_3 e_1>4-. r << e'_1 d_2 gis,_5-. >> r |
-  q2 r |\break
+  <a' cis e>4_1_3_5-. r <gis d' e>_1_2_5-. r |
+  <a cis e>2_1_3_5 r |
+  <a cis e>4_1_3_5-. r <gis d' e>_1_2_5-. r |
+  <a cis e>2_1_3_5 r |\break
   
   cis4_3( a_5) r2 |
   cis4_3( a_5) r2 |
   b4_4-. b-. a_5-. a-. |
   e'2_1 r |\break
   
-  <a,_5 cis_3 e_1>4-. r << e'_1 d_2 gis,_5-. >> r |
-  <a_5 cis_3 e_1>2 r |
-  <a_5 cis_3 e_1>4-. r << e'_1 d_2 gis,_5-. >> r |
-  <a_5 cis_3 e_1>2 r |\break
+  <a, cis e>4_1_3_5-. r <gis d' e>_1_2_5-. r |
+  <a cis e>2_1_3_5 r |
+  <a cis e>4_1_3_5-. r <gis d' e>_1_2_5-. r |
+  <a cis e>2_1_3_5 r |\break
   
   cis4_3( a_5) r2 |
   cis4_3( a_5) r2 |
   d4_2-. b_4-. d_2-. e_1-. |
-  <a,_5 cis_3>2 \bar"|."
+  <a, cis>2_3_5 \bar"|."
 }
 
 \paper {

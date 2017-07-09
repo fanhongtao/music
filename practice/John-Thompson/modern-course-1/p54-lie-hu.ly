@@ -24,20 +24,20 @@ upper = \relative c'' {
   s2. |
   g4.-1~ g4 r8 |
   s2. |
-  <g-1 b^3>4.~ q4 r8 |\break
+  <g b>4.-1-3~ q4 r8 |\break
   
   s2. |
-  <g-1 d'^5>4. <g-1 c^4>4. |
+  <g d'>4.-1-5 <g c>4.-1-4 |
   b4-3-. b8-3-. a4-2-. a8-2-. |
   g4.-1~ g4 r8 |\break
   
   s2. |
   g4.-1~ g4 r8 |
   s2. |
-  q4.~ q4 r8 |\break
+  <g b>4.~ q4 r8 |\break
   
   s2. |
-  <g-1 d'^5>4. <g-1 c^4>4. |
+  <g d'>4.-1-5 <g c>4.-1-4 |
   b4-3-. b8-3-. a4-2-. a8-2-. |
   g4.-1~ g4 r8 |\break
   
@@ -73,7 +73,7 @@ lower = \relative c {
   <<
     {
       \change Staff = upper
-      <g-1 b^3>4-.) <g-1 b^3>8-. <g-1 b^3>4-. <g-1 b^3>8-. |
+      <g b>4-1-3-.) q8-1-3-. q4-1-3-. q8-1-3-. |
     }
     \new Voice {
       R2. |
@@ -85,7 +85,7 @@ lower = \relative c {
   <<
     {
       \change Staff = upper
-      <g-1 d'^5>4-.) <g-1 d'^5>8-. <g-1 d'^5>4-. <g-1 d'^5>8-. |
+      <g d'>4-1-5-.) q8-1-5-. q4-1-5-. q8-1-5-. |
     }
     \new Voice {
       b,4_4-. b8_4-. b4_4-. b8_4-. |
@@ -110,7 +110,7 @@ lower = \relative c {
   <<
     {
       \change Staff = upper
-      <g-1 b^3>4-.) q8-. q4-. q8-. |
+      <g b>4-1-3-.) q8-. q4-. q8-. |
     }
     \new Voice {
       R2. |
@@ -122,7 +122,7 @@ lower = \relative c {
   <<
     {
       \change Staff = upper
-      <g-1 d'^5>4-.) q8-. q4-. q8-. |
+      <g d'>4-1-5-.) q8-. q4-. q8-. |
     }
     \new Voice {
       b,4_4-. b8-. b4-. b8-. |

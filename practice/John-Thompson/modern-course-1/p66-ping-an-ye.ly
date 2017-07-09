@@ -1,5 +1,5 @@
 \version "2.18.2"
-% 《约翰•汤普森 现代钢琴教程 1》 P44
+% 《约翰•汤普森 现代钢琴教程 1》 P66
 
 \markup { \fill-line { "三  种  手  位" } }
 
@@ -107,7 +107,7 @@ lower = \relative c {
   \dynamicUp
   c'4_1\p g_3 e_5 |
   r4 r \clef bass f,_2 |
-  <e_3 c_5>2.~ |
+  <c e>2._3_5~ |
   q4 r r |\bar"|."
 }
 

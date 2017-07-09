@@ -65,7 +65,7 @@ lower_hand = \relative c {
       \key d \major
       \time 4/4
       \numericTimeSignature
-      <a_1 fis_3 d_5>2 << a2_1 g2_2 cis2_5>>
+      <d fis a>2_1_3_5 <cis g a>_1_2_5
     }
     \layout { ragged-right = ##t indent = 0.2\cm }
   }
