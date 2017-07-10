@@ -1,6 +1,8 @@
 \version "2.18.2"
 % 《约翰•汤普森 现代钢琴教程 1》 P04
 
+\include "../../../lib/slurs.ly"
+
 keyTime = {
   \key c \major
   \time 4/4
@@ -12,11 +14,13 @@ upper = \relative c'' {
   \keyTime
   \tempo "M.M." 4=60-120
   
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
   e,2-3^(^\markup { \halign #-9.5 \abs-fontsize #12 第一乐句 } f-4 |
   g2-5 c,-1 |
   d2-2 f-4 |
   e1-3) |\break
   
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
   e2-3^(^\markup { \halign #-9.5 \abs-fontsize #12 第二乐句 } f-4 |
   g2-5 c,-1 |
   d2-2 e-3 |

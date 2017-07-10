@@ -1,5 +1,6 @@
 \version "2.18.2"
 
+\include "../../../lib/slurs.ly"
 
 upper_one = \relative c'' {
   \clef treble
@@ -7,15 +8,17 @@ upper_one = \relative c'' {
   \time 2/4
   \phrasingSlurUp
   
-  e,4-3\(^\markup { \halign #-9.5 \abs-fontsize #12 第一乐句 } e |
+  \shapeSlur #'(0 7 0 12.5 0 12.5 0 7)
+  e,4-3(^\markup { \halign #-9.5 \abs-fontsize #12 第一乐句 } e |
   g4-5 c,-1 |
   d8-2 e f4 |
-  e2\) |\break
+  e2) |\break
   
-  e8-3\(^\markup { \halign #-10 \abs-fontsize #12 第二乐句 } [ f] e [ f] |
+  \shapeSlur #'(0 7 0 12.5 0 12.5 0 7)
+  e8-3(^\markup { \halign #-10 \abs-fontsize #12 第二乐句 } [ f] e [ f] |
   g4 c, |
   d8 e d4 |
-  c2\) |\bar "|."
+  c2) |\bar "|."
 }
 
 lower_one = \relative c {

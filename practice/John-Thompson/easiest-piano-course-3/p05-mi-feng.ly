@@ -1,5 +1,6 @@
 \version "2.18.2"
 
+\include "../../../lib/slurs.ly"
 
 upper = \relative c'' {
   \clef treble
@@ -8,14 +9,17 @@ upper = \relative c'' {
   \numericTimeSignature
   \phrasingSlurUp
   
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
   d4-5(^\markup { \halign #-9.25 \abs-fontsize #12 第一乐句 } c b2 |
-  a8-2 b c a g2) |\break
+  \stemDown a8-2 b c a \stemNeutral g2) |\break
   
-  b8-3([^\markup { \halign #-9.75 \abs-fontsize #12 第二乐句 } c d b] a-2[ b c a] |
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
+  \stemDown b8-3([^\markup { \halign #-9.75 \abs-fontsize #12 第二乐句 } c d b] a-2[ b c a] |
   b8[ c d b] a[ b c a]) |\break
   
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
   d4-5(^\markup { \halign #-9.75 \abs-fontsize #12 第三乐句 } c b2 |
-  a8-2[ b c a] g2) |\bar "|."
+  a8-2[ b c a] \stemNeutral g2) |\bar "|."
 }
 
 lower = \relative c {
@@ -54,6 +58,7 @@ lower = \relative c {
   \header {
     title = "蜜     蜂"
     subtitle = ##f
+    composer = "民 歌"
   }
   \new PianoStaff <<
     \new Staff = "upper" \upper
