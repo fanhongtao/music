@@ -63,19 +63,19 @@ lower = \relative c {
     a8_5 c_1 a_2 d,_5 |\break
     
     g8_3 a_2 c_1 d_2) \clef treble |
-    r8 << a'8_1_> g_2 d_5 >> r <a' g d>_> |
+    r8 <d g a>_1_2_3_> r q_> |
     r8 q_> r q_> |
-    r8 <g e c a> r <e c a> |
+    r8 <a c e g> r <a c e> |
     r8 q r q |
-    a,8 c <fis c>4 |\break
+    a8 c <c fis>4 |\break
     
-    g,8 <g' d> q r |
-    a,8_5 e'_2 <g_1 c,_4>4 |
-    g,8_5 e'_2 <g_1 c,_4> r\fermata |
+    g8 <d' g> q r |
+    a8_5 e'_2 <c g'>4_1_4 |
+    g8_5 e'_2 <c g'>8_1_4 r\fermata |
   }
-  a,8_5 e'_2 <g_1 c,_4>4 |
-  a,8_5 e'_2 <fis_1 d_3>4 |
-  g,8 d' <g_1 b,_4>4 |\bar "|."
+  a8_5 e'_2 <c g'>4_1_4 |
+  a8_5 e'_2 <d fis>4_1_3 |
+  g,8 d' <b g'>4_1_4 |\bar "|."
 }
 
 myStaff = \new PianoStaff <<

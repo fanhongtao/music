@@ -84,15 +84,15 @@ lower = \relative c {
   fis4-. d-. |
   g4 r |
   R2 |
-  <d'_1 b_2 g_4>8-! q-! r4 |
+  <g b d>8_1_2_4-! q-! r4 |
   R2 |
-  <e_1 c_2 a_4>8-! q-! r4 |\break
+  <a c e>8_1_2_4-! q-! r4 |\break
   
-  r4 <d_1 b_2 g_4>8-! q-! |
+  r4 <g b d>8_1_2_4-! q-! |
   R2 |
-  <d_1 a_3 fis_5>4-! r |
-  <d_1 b_2 g_4>4-! r |
-  <d_1 a_3 fis_5>4 <d_1 b_2 g_4>~ |
+  <fis a d>4_1_3_5-! r |
+  <g b d>4_1_2_4-! r |
+  <fis a d>4_1_3_5 <g b d>4_1_2_4~ |
   q2 |\bar "|."
 }
 
