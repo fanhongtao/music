@@ -32,24 +32,24 @@ lower = \relative c {
   \key g \major
   \time 6/8
   
-  <d'_1 b_3 g_5>8-. r r q-. r r |
+  <g' b d>8_1_3_5-. r r q-. r r |
   q8-. r r q-. r r |
-  <b_3 g_5>8-. r r q-. r r |
+  <g b>8_3_5-. r r q-. r r |
   q8-. r r q-. r r |\break
   
-  << d8_1-. c8_2 fis,8_5 >> r8 r <d' c fis,>8-. r r |
-  <d_1 b_3 g_5>8-. r r q-. r r |
-  <d c fis,>8-. r r q-. r r |
-  q8-. r r d_1[ r \set melismaBusyProperties = #'() c_2]( |\break
+  <fis c' d>8_1_2_5-. r8 r q8-. r r |
+  <g b d>8_1_3_5-. r r q-. r r |
+  <fis c' d>8-. r r q-. r r |
+  q8-. r r d'_1[ r \set melismaBusyProperties = #'() c_2]( |\break
   
-  <b_3 g_5>8-.) r r r4 r8 |
+  <g b>8_3_5-.) r r r4 r8 |
   q4. r4 r8 |
-  <c_2 g_5>8-. r r r4 r8 |
-  <b g>4. r4 r8 |\break
+  <g c>8_2_5-. r r r4 r8 |
+  <g b>4. r4 r8 |\break
   
-  <d b g>8-. r r q-. r r |
-  <c g>8-. r r q-. r r |
-  <b g>8-. r r q-. r r |
+  <g b d>8-. r r q-. r r |
+  <g c>8-. r r q-. r r |
+  <g b>8-. r r q-. r r |
   q8-. r r r4 r8 |\bar"|."
 }
 

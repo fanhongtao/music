@@ -24,14 +24,14 @@ lower = \relative c {
   \time 2/4
   \numericTimeSignature
   
-  <d'_1 g,_5>2 |
+  <g' d'>2_1_5 |
   q2 |
-  <d-1 fis,_5>2 |
-  <d g,>2 |\break
+  <fis d'>2_1_5 |
+  <g d'>2 |\break
   
   q2 |
   q2 |
-  <d g,>4-. <d fis,>4-. |
+  q4-. <fis d'>4-. |
   b8-._3[ d-._1 g,-._5] r |\bar"|."
 }
 

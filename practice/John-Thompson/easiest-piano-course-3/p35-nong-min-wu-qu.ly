@@ -49,15 +49,15 @@ lower = \relative c {
   \dynamicUp
   
   \partial 4 r4 |
-  cis4_5( << a'4_1) g4_2 >> <a g>4 |
-  d,4_5( <a'_1 fis_3>) q |
-  cis,4( <a' g>) q |
-  d,4( <a' fis>) q |\break
+  cis4_5( <g' a>_1_2) q4 |
+  d4_5( <fis a>_1_3) q |
+  cis4( <g' a>) q |
+  d4( <fis a>) q |\break
   
-  cis,4( <a' g>) q |
-  d,4( <a' fis>) q |
-  cis,4( <a' g>) q |
-  <fis_3 d_5>2 r4 |\break
+  cis4( <g' a>) q |
+  d4( <fis a>) q |
+  cis4( <g' a>) q |
+  <d fis>2_3_5 r4 |\break
   
   \repeat volta 2 {
     cis4_5 g'_2 a_1 |
@@ -73,10 +73,10 @@ lower = \relative c {
     }
   }
   
-  <fis d>4 r4 \clef treble g''4(_1 |
-  <fis_2 d_4>4) r a,_1( |
-  <fis_2 d_4>4) r \clef bass g,4_1( |
-  <fis_2 d_4>4) q-. q-. |
+  <d, fis>4 r4 \clef treble g''4(_1 |
+  <d fis>4_2_4) r a_1( |
+  <d, fis>4_2_4) r \clef bass g,4_1( |
+  <d fis>4_2_4) q-. q-. |
   q2 \bar"|."
 }
 

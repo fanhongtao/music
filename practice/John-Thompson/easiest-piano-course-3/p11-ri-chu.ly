@@ -17,7 +17,7 @@ upper = \relative c'' {
   c4\p a f |
   g4-2 a g |
   f4\< g a-3\! |
-  <e^1 g^2>2.\>\! |\break
+  <e g>2.-1-2\>\! |\break
   
   c'4-5\mp a g |
   f4 g a |

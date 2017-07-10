@@ -4,9 +4,7 @@ upperA = \relative c'' {
   \clef treble
   \key g \major
   \time 4/4
-  % \numericTimeSignature
   \tempo "Allegro 快板"
-  % \override Hairpin.to-barline = ##f
   
   b8-1\mf d-3->( d) e-4 d2-3 |
   g,8-1 b-3_>( b) c-4 b2-3 |
@@ -33,9 +31,7 @@ upperB = \relative c'' {
   \clef treble
   \key g \major
   \time 4/4
-  % \numericTimeSignature
   \dynamicUp
-  %\override DynamicText.X-offset = #-4.2
   
   R1 |
   R1 |
@@ -64,25 +60,25 @@ lowerA = \relative c {
   \key g \major
   \time 4/4
   
-  <d'-4 b^2>2.--\mf q4-. |
+  <b' d>2.-2-4--\mf q4-. |
   q2.-- q4-. |
-  g,4-. a2-- ais4-3-. |
-  <b-4 g^1>4-. g4( a ais) |\break
+  g4-. a2-- ais4-3-. |
+  <g b>4-1-4-. g4( a ais) |\break
   
-  <d b>2.-- q4-. |
+  <b d>2.-- q4-. |
   q2.-- q4-. |
   cis4-3-. cis2-- cis4-. |
   c!1-2 |\break
   
-  <d b>2.--\mf q4-. |
+  <b d>2.--\mf q4-. |
   q2.-- q4-. |
-  g,4-. a2-- ais4-. |
-  <b g>4-. g4( a b) |\break
+  g4-. a2-- ais4-. |
+  <g b>4-. g4( a b) |\break
   
-  g2\f <b g>4 r \clef treble |
-  g'2 <b g>4 r \clef bass |
+  g2\f <g b>4 r \clef treble |
+  g'2 <g b>4 r \clef bass |
   cis,4-3-.\ff cis2-- c!4-. |
-  b2-1(\< << d4-3-. e4-4-.\!)  >> r4 |\bar"|."
+  b2-1(\< <d e>4-3-4-.\!) r4 |\bar"|."
 }
 
 lowerB = \relative c {
@@ -93,23 +89,23 @@ lowerB = \relative c {
   
   g'2._1-- fis4_2-. |
   e2._3-- d4_4-. |
-  <e c>4-. q2-- q4-. |
-  <d g,>4_. r4 r2 |\break
-  
-  g2.-- fis4-. |
-  e2.-- d4-. |
-  <g a,>4-. q2-- q4-. |
-  <fis_2 d_4>2( d,2) |\break
+  <c e>4-. q2-- q4-. |
+  <g d'>4_. r4 r2 |\break
   
   g'2.-- fis4-. |
   e2.-- d4-. |
-  <e c>4-. q2-- q4-. |
-  <d g,>4_. r4 r2 |\break
+  <a g'>4-. q2-- q4-. |
+  <d fis>2_2_4( d,2) |\break
+  
+  g'2.-- fis4-. |
+  e2.-- d4-. |
+  <c e>4-. q2-- q4-. |
+  <g d'>4_. r4 r2 |\break
   
   c2 g4 r |
   c'2 g4 r |
-  <g_1 a,_5>4-. q2-- <fis d>4-. |
-  <d_2 g,_5>2( g4_1-.) r4 |\bar"|."
+  <a, g'>4_1_5-. q2-- <d fis>4-. |
+  <g, d'>2_2_5( g'4_1-.) r4 |\bar"|."
 }
 
 \paper {

@@ -4,7 +4,6 @@ upper = \relative c'' {
   \clef treble
   \key g \major
   \time 4/4
-  % \numericTimeSignature
   \tempo "Allegro 快板"
   
   g'2-3\f g,_3_左手 |
@@ -44,17 +43,15 @@ upper = \relative c'' {
   \change Staff = upper
   R1 |
   d'4-2( e fis-4) r |
-  g4_.\f r <ees^3 g^5>_. r |
-  <d^2 g-5>1 |\bar"|."
+  g4_.\f r <ees g>-3-5_. r |
+  <d g>1-2-5 |\bar"|."
 }
 
 lower = \relative c {
   \clef bass
   \key c \major
   \time 4/4
-  % \numericTimeSignature
   \dynamicUp
-  % \override Hairpin.to-barline = ##f
   
   s1 |
   s1 |

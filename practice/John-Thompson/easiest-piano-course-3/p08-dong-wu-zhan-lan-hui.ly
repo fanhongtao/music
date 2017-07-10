@@ -54,42 +54,42 @@ lower = \relative c {
   \numericTimeSignature
   
   \partial 4 r4 |
-  <b'_3 g_5>4-. r4 r |
+  <g' b>4_3_5-. r4 r |
   R2. |
-  <b g>2. |
+  q2. |
   R2. |
-  <b g>4-. r r |
+  q4-. r r |
   R2. |\break
   
-  <b g>2. |
+  q2. |
   R2. |
-  <c_2 g_5>4-. r r |
+  <g c>4_2_5-. r r |
   R2. |
-  <c g>4-. r r |
+  q4-. r r |
   R2. |\break
   
-  <c g>4-. r r |
+  q4-. r r |
   R2. |
-  <b_3 g_5>2. |
+  <g b>2._3_5 |
   R2. |
-  <b g>4-. r r |
+  q4-. r r |
   R2. |\break
   
-  <b g>2. |
+  q2. |
   R2. |
-  <b g>4-. r r |
+  q4-. r r |
   R2. |
-  <b g>2. |
+  q2. |
   R2. |
-  <c_2 g_5>4-. r r |\break
+  <g c>4_2_5-. r r |\break
   
   R2. |
-  <c g>4-. r r |
+  q4-. r r |
   R2. |
-  <c g>4-. r r |
+  q4-. r r |
   R2. |
-  <b_3 g_5>4-. r r |
-  g,4_._5^\markup { \rounded-box { "G" } } r \bar"|."
+  <g b>4_3_5-. r r |
+  g,4_._5^\markup { \halign #-1 \rounded-box { "G" } } r \bar"|."
 }
 
 text = \lyricmode {

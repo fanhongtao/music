@@ -24,7 +24,7 @@ lower = \relative c {
   \time 4/4
   \numericTimeSignature
   
-  <d'_1 g,_5>1 |
+  <g' d'>1_1_5 |
   q1 |\break
   
   q1 |

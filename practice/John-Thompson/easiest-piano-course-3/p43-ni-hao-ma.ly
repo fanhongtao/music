@@ -37,24 +37,24 @@ lower = \relative c {
   \time 6/8
   
   \partial 4. r4 r8 |
-  <b'_3 g_5>4. r4 r8 |
+  <g' b>4._3_5 r4 r8 |
   q4. r4 r8 |
-  <c_2 fis,_5>4. r4 r8 |
-  d4._1 r4 r8 |\break
+  <fis c>4._2_5 r4 r8 |
+  d'4._1 r4 r8 |\break
   
-  <c fis,>4. r4 r8 |
-  << d4._1 c4._2 fis,4._5 >> r4 r8 |
-  <d'_1 b_3 g_5>4. r4 r8 |
-  d4._1 r4 r8 |\break
+  <fis, c'>4. r4 r8 |
+  <fis c' d>4._1_2_5 r4 r8 |
+  <g b d>4._1_3_5 r4 r8 |
+  d'4._1 r4 r8 |\break
   
-  <d g,>4. r4 r8 |
-  <fis_1 g,_5>4.r4 r8 |
-  <e_1 g,_5>4. r4 r8 |
-  <ees_1 g,_5>4. r4 r8 |\break
+  <g, d'>4. r4 r8 |
+  <g fis'>4._1_5 r4 r8 |
+  <g e'>4._1_5 r4 r8 |
+  <g ees'>4._1_5 r4 r8 |\break
   
-  <d_1 fis,_5>4. r4 r8 |
-  << d4._1 c4._2 fis,4._5 >> r4 r8 |
-  <b_3 g_5>4. r4 r8 |
+  <fis d'>4._1_5 r4 r8 |
+  <fis c' d>4._1_2_5 r4 r8 |
+  <g b>4._3_5 r4 r8 |
   g8_5-. r r \bar"|."
 }
 

@@ -47,7 +47,7 @@ lower = \relative c {
   a,4_5 cis_3 e_1 |
   g,4_5 cis_2 e_1 |
   fis,4_5 a_3 d_1 |
-  <dis_1 a_3 f_5>2\fermata r4 |\break
+  <f, a dis>2_1_3_5\fermata r4 |\break
   
   a4_5 cis_3 e |
   gis,4_5 d'_2 e |

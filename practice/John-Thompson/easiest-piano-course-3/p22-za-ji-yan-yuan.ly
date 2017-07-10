@@ -47,7 +47,7 @@ upper = \relative c'' {
     }
   >>
   \change Staff = upper
-  <c^2 f-5>2 |\bar"|."
+  <c f>2-2-5 |\bar"|."
 }
 
 lower = \relative c {
@@ -63,7 +63,7 @@ lower = \relative c {
     {
       \change Staff = upper
        c8-2[ d] e[ f] |
-       <c^2 e-4>4_.) <c e>_. |
+       <c e>4-2-4_.) q_. |
     }
     \new Voice {
       R2 |
@@ -83,7 +83,7 @@ lower = \relative c {
     {
       \change Staff = upper
        c8-2[ d] e[ f] |
-       <c e>4_.) <c e>_. |
+       <c e>4_.) q_. |
     }
     \new Voice {
       R2 |

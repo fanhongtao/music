@@ -35,16 +35,16 @@ lower = \relative c {
   % \numericTimeSignature
   
   \partial 4 r4 |
-  <d'_1 b_3 g_5>2. |
-  << {d2._1} {c2._2} {fis,2._5} >> |
-  <d' c fis,> 2. |
-  <d b g>2. |\break
+  <g' b d>2._1_3_5 |
+  <fis c' d>2._1_2_5 |
+  q2. |
+  <g b d>2. |\break
   
   q2. |
-  <d c fis,>2. |
+  <fis c' d>2. |
   q2. |
-  <d b g>2. |
-  g,4( b) d |
+  <g b d>2. |
+  g4( b) d |
   fis,4( c') d |\break
   
   fis,4( c') d |
@@ -52,7 +52,7 @@ lower = \relative c {
   g,4( b) d |
   fis,4( c') d |
   fis,4( c') d |
-  <b g>2 \bar"|."
+  <g, b>2 \bar"|."
 }
 
 \paper {

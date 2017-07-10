@@ -4,9 +4,7 @@ upper = \relative c'' {
   \clef treble
   \key c \major
   \time 4/4
-  % \numericTimeSignature
   \tempo "Allegro 快板"
-  % \override Hairpin.to-barline = ##f
   
   R1 |
   R1 | \break
@@ -46,42 +44,41 @@ lower = \relative c {
   \clef bass
   \key c \major
   \time 4/4
-  % \numericTimeSignature
   \dynamicUp
   
   \override DynamicText.X-offset = #-4.2
-  <g' c,>4->-.^重音记号\mp q-. q-. q-. |
+  <c g'>4->-.^重音记号\mp q-. q-. q-. |
   q->-. q-. q-. q-. |\break
   
-  <g c,>4->-.\mf q-. q-. q-. |
+  q4->-.\mf q-. q-. q-. |
   q->-. q-. q-. q-. |
   q->-. q-. q-. q-. |
   q->-. q-. q-. r |\break
   
-  <aes_1 c,_5>4->-.\mf q-. q-. q-. |
+  <c aes'>4_1_5->-.\mf q-. q-. q-. |
   q->-. q-. q-. q-. |
-  <g_1 c,_5>4->-. q-. q-. q-. |
+  <c g'>4_1_5->-. q-. q-. q-. |
   q->-. q-. q-. r |\break
   
-  <g c,>4->-.\f q-. q-. q-. |
+  q4->-.\f q-. q-. q-. |
   q->-. q-. q-. q-. |
   q->-. q-. q-. q-. |
   q->-. q-. q-. r |\break
   
-  <aes_1 c,_5>4->-.\mf q-. q-. q-. |
+  <c aes'>4_1_5->-.\mf q-. q-. q-. |
   q->-. q-. q-. q-. |
-  <g_1 c,_5>4->-. q-. q-. q-. |
+  <c g'>4_1_5->-. q-. q-. q-. |
   q->-. q-. q-. r |\break
   
-  <aes_1 c,_5>4->-.\mp q-. q-. q-. |
-  <g_1 c,_5>4->-. q-. q-. q-. |
+  <c aes'>4_1_5->-.\mp q-. q-. q-. |
+  <c g'>4_1_5->-. q-. q-. q-. |
   \once \override DynamicText.X-offset = #-2.2
-  <aes c,>4->-.\p q-. q-. q-. |
-  <g c,>4->-. q-. q-. q-. |\break
+  <c aes'>4->-.\p q-. q-. q-. |
+  <c g'>4->-. q-. q-. q-. |\break
   
-  <aes c,>4->-.\pp q-. q-. q-. |
+  <c aes'>4->-.\pp q-. q-. q-. |
   q->-. q-. q-. q-. |
-  <g c,>4->-. q-. q-. q-. |
+  <c g'>4->-. q-. q-. q-. |
   q->-. r 
   \set Staff.ottavation = #"8"
   \once \override Staff.OttavaBracket.direction = #DOWN

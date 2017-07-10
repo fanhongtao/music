@@ -14,8 +14,8 @@ upper = \relative c'' {
   
   a'4-5 g f |
   f4 d f |
-  <g-4 e^2>2.~ |
-  q4 r c,-1 |
+  <e g>2.-2-4~ |
+  q4 r c-1 |
   a'4-5 g f |
   g4-4 f d |\break
   
@@ -55,17 +55,17 @@ lower = \relative c {
   \time 3/4
   
   \partial 4 r4 |
-  <a'_3 f_5>2. |
-  <bes_2 f_5>2. |
+  <f a>2._3_5 |
+  <f bes>2._2_5 |
   f4_5( a_3 c |
   f,4) r r |\break
   
-  <a_3 f_5>2. |
+  <f a>2._3_5 |
   g4_4 b_2 g |
   r4 c_1( b_2 |
   c4) r r |
-  <a_3 f_5>2. |
-  <bes_2 f_5>2. |\break
+  <f, a>2._3_5 |
+  <f bes>2._2_5 |\break
   
   f4( a c |
   f,4) r r |
@@ -75,10 +75,10 @@ lower = \relative c {
   f4) r r |\break
   
   \repeat volta 2 {
-    r4 <a_3 f_5>-. q-. |
-    r4 <a f>-. q-. |
-    r4 <bes_2 f_5>-. q-. |
-    r4 <bes f>-. q-. |
+    r4 <f a>_3_5-. q-. |
+    r4 q-. q-. |
+    r4 <f bes>_2_5-. q-. |
+    r4 q-. q-. |
     r4 bes_2 c |\break
     
     bes4 c bes |

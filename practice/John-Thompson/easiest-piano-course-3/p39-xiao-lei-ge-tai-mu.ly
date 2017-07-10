@@ -34,25 +34,25 @@ lower = \relative c {
   \time 4/4
   \dynamicUp
   
-  r2 <a'_3 f_5>4-. r |
-  r2 <a f>4-. r |
-  r2 <bes_2 f_5>4-. r |
-  r2 <bes f>4-. r |\break
+  r2 <f a>4_3_5-. r |
+  r2 q4-. r |
+  r2 <f bes>4_2_5-. r |
+  r2 q4-. r |\break
   
-  r2 <a_3 f_5>4-. r |
+  r2 <f a>4_3_5-. r |
   r2 b4_2-. r |
   r2 c4-. r |
   c2 r |\break
   
-  r2 <a_3 f_5>4-. r |
-  r2 <a f>4-. r |
-  r2 <bes_2 f_5>4-. r |
-  r2 <bes f>4-. r|\break
+  r2 <f, a>4_3_5-. r |
+  r2 q4-. r |
+  r2 <f bes>4_2_5-. r |
+  r2 q4-. r|\break
   
-  r2 <a f>4-. r |
-  r2 << c4_1-. bes4_2-. >> r4 |
-  r2\< <c_1 a_3>2(\! |
-  f,4_5-.) r r2 |\bar"|."
+  r2 <f a>4-. r |
+  r2 <bes c>4_1_2-. r4 |
+  r2\< <a c>2_1_3(\! |
+  f4_5-.) r r2 |\bar"|."
 }
 
 

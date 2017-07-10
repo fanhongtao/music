@@ -25,12 +25,11 @@ upper = \relative c'' {
   c2. |\break
   
   \stemDown
-  %% <gis'_2 a_3>4-.
   \once \override DynamicText.X-offset = #-2.6
-  << {gis'4_2->\f} {a4_3-.} >>
+  <gis' a>4_2_3->-.\f
   r4 r |
   \stemNeutral
-  d,4-2_. r4 f-4_. |
+  d4-2_. r4 f-4_. |
   e2.-3( |
   c4) r \bar"|."
 }

@@ -5,15 +5,15 @@ upper = \relative c'' {
   \key c \major
   \time 3/4
   
-  r4 <c,^1 e^3 g^5> q |
-  r4 <c e g> q |
-  r4 <f^1 a^3 c^5> q |
-  r4 <f a c> q |\break
+  r4 <c, e g>-1-3-5 q |
+  r4 q q |
+  r4 <f a c>-1-3-5 q |
+  r4 q q |\break
   
-  r4 <g^1 b^3 d^5> q |
-  r4 <g b d> q |
-  r4 <c^1 e^3 g^5> q |
-  r4 <c e g> q | \break
+  r4 <g b d>-1-3-5 q |
+  r4 q q |
+  r4 <c e g>-1-3-5 q |
+  r4 q q | \break
   
   c,2-1 e4-3 |
   g2.-5 |
@@ -41,15 +41,15 @@ lower = \relative c {
   \clef "treble" c2_5 e4_3 |
   g2._1 \clef "bass"|\break
   
-  r4 <g,_1 e_3 c_5> q |
-  r4 <g e c> q |
-  r4 <c_1 a_3 f_5> q |
-  r4 <c a f> q |\break
+  r4 <c,, e g>_1_3_5 q |
+  r4 q q |
+  r4 <f a c>_1_3_5 q |
+  r4 q q |\break
   
-  r4 <d_1 b_3 g_5> q |
-  r4 <d b g> q |
-  r4 \clef "treble" <g e c> q |
-  <g e c>2. |\bar"|."
+  r4 <g b d>_1_3_5 q |
+  r4 q q |
+  r4 \clef "treble" <c e g> q |
+  q2. |\bar"|."
 }
 
 \header {

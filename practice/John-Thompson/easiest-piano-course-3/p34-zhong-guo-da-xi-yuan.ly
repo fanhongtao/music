@@ -1,7 +1,7 @@
 \version "2.18.2"
 
-right_one = \relative c'' { << b4-3-. c4-4-. >> <c b>4-. q-. q-. }
-right_two = \relative c'' { << a4-3_. b4-4_. >> <b a>4-. q-. r }
+right_one = \relative c'' { <b c>4-3-4-. q-. q-. q-. }
+right_two = \relative c'' { <a b>4-3-4_. q-. q-. r }
 upper = \relative c'' {
   \clef treble
   \key c \major
@@ -27,32 +27,31 @@ upper = \relative c'' {
   e2-1 g-2 |
   \right_two |
   e4_.^\markup { \italic { poco rit. } } g_. a_. c-. |
-  << e,2.-1 g2.-2 a2.-3 >> r4 |\bar"|."
+  <e, g a>2.-1-2-3 r4 |\bar"|."
 }
 
 lower = \relative c {
   \clef bass
   \key c \major
   \time 4/4
-  % \numericTimeSignature
   \dynamicUp
   
-  <d_1 a_5>4_.\mf q_. q_. q_. |
+  <a d>4_1_5_.\mf q_. q_. q_. |
   q4_. q_. q_. q_. |
   q4_. q_. q_. q_. |
   q4_. q_. q_. r |\break
   
-  <g_1 c,_5>4-.\p\< q-. q-. q-.\! |
+  <c g'>4_1_5-.\p\< q-. q-. q-.\! |
   q4-. q-. q-. q-. |
   q4-. q-. q-.\> q-. |
   q4-. q-.\! q-. r |\break
   
-  <d_1 a_5>4_.\f q_. q_. q_. |
+  <a d>4_1_5_.\f q_. q_. q_. |
   q4_. q_. q_. q_. |
   q4_. q_. q_. q_. |
   q4_. q_. q_. r |\break
   
-  <g_1 c,_5>4-.\mf\< q-. q-. q-.\! |
+  <c g'>4_1_5-.\mf\< q-. q-. q-.\! |
   q4-. q-. q-. q-. |
   q4-. q-. q-.\> q-. |
   q4-. q-.\! q-. r |\bar"|."

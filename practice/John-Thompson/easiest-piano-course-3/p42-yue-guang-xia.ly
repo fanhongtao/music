@@ -24,7 +24,7 @@ upper = \relative c'' {
   bes2 bes4 |
   aes2 aes4 |
   g2\> g4( |
-  <f-2 d^1>2)\! r4 |
+  <d f>2-1-2)\! r4 |
   g2-3\p g4 |
   f4 g f |\break
   
