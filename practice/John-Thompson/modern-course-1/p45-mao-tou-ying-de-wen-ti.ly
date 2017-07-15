@@ -46,6 +46,8 @@ upper = \relative c'' {
   \keyTime
   \tempo \markup { "Andante M.M. " \note-by-number #2 #0 #UP "= 60 - " \note-by-number #1 #0 #UP " = 58" }
   \override Hairpin.to-barline = ##f
+  \set Staff.midiMinimumVolume = #0.4
+  \set Staff.midiMaximumVolume = #0.9
   
   \shapeSlur #'(1 0 2 6 3 6 0 -1)
   d,2-3^( ees-4 |
@@ -62,7 +64,8 @@ upper = \relative c'' {
   %\once\override Slur.control-points =
   %      #'((2 . 0) (2 . 8) (75 . 8) (78 . -1))
   \shapeSlur #'(1 0 2 6 3 6 0 -1)
-  d2-3^( ees-4 |
+  \tag #'pdf { d2-3^( ees-4 | }
+  \tag #'midi { d2-3^(\mp ees-4 | }
   f2-5 ees-4 |
   d2-3 c-2 |
   bes1-1) |\break
@@ -111,10 +114,29 @@ lower = \relative c {
     title = "猫头鹰的问题"
     subtitle = "（夜  曲）"
   }
+  \keepWithTag #'pdf
   \new PianoStaff <<
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
   >>
   \layout { }
+}
+
+\score {
+  \keepWithTag #'midi
+  \new PianoStaff <<
+    \new Staff = "upper" \upper
+    \new Staff = "lower" \lower
+  >>
   \midi { }
+}
+
+\markup { 第二行的三个 decrescendo 记号，会导致高音谱在 midi 中没有声音。所以需要使用一些技巧： }
+\markup { 先设置 midi 的最大、最小音量，确保第二行最后一个 C 也能有声音。}
+\markup { 再使用一个在PDF中不可见的记号。让第三行第一个音回到 decrescendo 之前。 }
+\markup { \vspace #1 }
+\markup { 参考: }
+\markup { 1、\with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/expressive-marks-attached-to-notes" {
+    Controlling MIDI dynamics
+  }
 }
