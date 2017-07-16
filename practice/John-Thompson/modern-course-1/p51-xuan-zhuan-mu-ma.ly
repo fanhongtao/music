@@ -111,10 +111,10 @@ lower_repeat = \relative c {
   
   q4._1_5( b_3) |
   q4._1_5( b_3) |
-  d4._1 c_2 |
+  d4._1 c_2
   
   \set Timing.measurePosition = #(ly:make-moment 1/8)
-  b4._3 g4_5 |\bar "||"
+  b4._3 g4_5 \bar "||"
 }
 
 lower = \relative c {
@@ -132,10 +132,10 @@ lower = \relative c {
   d,4._5 a'_1 |
   q4._1_5( fis4_3) r8 |
   q4._1_5( fis4_3) r8 |
-  a4._1 g_2 |
+  a4._1 g_2
   
   \set Timing.measurePosition = #(ly:make-moment 1/8)
-  fis4._3~ fis4 |\bar"||"\break
+  fis4._3~ fis4 \bar"||"\break
   
   \tag #'midi {
     \lower_repeat
@@ -169,3 +169,9 @@ lower = \relative c {
   >>
   \midi { }
 }
+
+
+\markup { \vspace #1 }
+\markup { 前一版本，编译时会有告警信息。 }
+\markup { 但如果只编译高音谱 或 低音谱 时，却又一个告警都没有。 原因未知。}
+\markup { 这里使用了变通的解决办法：删除低音谱部分代码的小节检查。 }
