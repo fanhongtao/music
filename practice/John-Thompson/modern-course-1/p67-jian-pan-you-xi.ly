@@ -2,6 +2,8 @@
 % 《约翰•汤普森 现代钢琴教程 1》 P67
 
 \include "../../../lib/brackets.ly"
+\include "../../../lib/slurs.ly"
+
 bracket = \squareBracket #'(0.0 . -0.0)  #'1.0
 bracketDown = \squareBracketDown #'(0.0 . -9.0)  #'1.0
 
@@ -25,18 +27,18 @@ upper = \relative c'' {
   <g c>4-2-5_. r <a c>-3-5_. r |
   <g c>2-2-5 r |\break
   
-  s2 s8 \bracket d'-2^\right_hand\startTextSpan e-3 fis-4 |
-  g4-5_.\stopTextSpan r <e g>-3-5_. r |
+  s2 s8 s4. |
+  s2 <e' g>4-3-5_. r |
   <d g>4-2-5_. r <e g>-3-5_. r |
   <d g>2-2-5 r |\break
   
-  s2 s8 g-2 a-3 b-4 |
-  c4-5-. r <g c>-2-5_. r |
-  s2 s8 c-2 d-3 e-4 |
-  f4-5-. r <c f>-2-5-. r |\break
+  s2 s8 s4. |
+  s2 <g c>4-2-5_. r |
+  s2 s8 s4. |
+  s2 <c f>4-2-5-. r |\break
   
-  s2 s8 d-2 e-3 fis-4 |
-  g4-5-. r <d g>-2-5-.\ff r |
+  s2 s8 s4. |
+  s2 <d g>4-2-5-.\ff r |
   <e g>4-3-5-. r <d g>-2-5-. r |
   <e g>2-3-5 r |\bar"|."
 }
@@ -50,18 +52,67 @@ lower = \relative c {
   e4_3-. r f_2-. r |
   e2_3 r |\break
   
-  \bracketDown g4_5_\left_hand\startTextSpan a8_4[ b_3] c_2\stopTextSpan s4. |
-  r2 c4_2-. r |
+  #(ly:expect-warning "no viable")
+  \bracketDown g4_5_\left_hand\startTextSpan a8_4[ b_3] 
+  \override Fingering.staff-padding = #'()
+  c_2[\stopTextSpan 
+  << 
+    {
+      \change Staff = "upper"
+      \bracket d-2^\markup { \lower #-2.5  \halign #-3.5 \rotate #10 右手 }\startTextSpan e-3 fis-4] 
+      g4-5_.\stopTextSpan r
+    }
+    \new Voice { s4. | r2 }
+  >>
+  \override Fingering.staff-padding = #'1
+  \change Staff = "lower"
+  c,4_2-. r |
   b4_3-. r c_2-. r |
   b2_3 r |\break
   
-  \clef treble c4_5 d8_4[ e_3] f_2 s4. |
-  r2 e4_3-. r |
-  f4_5 g8_4[ a_3] \stemUp bes_2 s4. |
-  r2 a4_3_. r |\break
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
+  \clef treble c4_5( d8_4[ e_3] f_2
+  << 
+    {
+      \change Staff = "upper"
+      \override Fingering.staff-padding = #'()
+      g-2 a-3 b-4 |
+      \override Fingering.staff-padding = #'1
+      c4-5-.) r
+    }
+    \new Voice { s4. | r2 }
+  >>
+  \change Staff = "lower"
+  e,4_3-. r |
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
+  f4_5( g8_4[ a_3] bes_2 
+  << 
+    {
+      \change Staff = "upper"
+      \override Fingering.staff-padding = #'()
+      c-2 d-3 e-4 |
+      \override Fingering.staff-padding = #'1
+      f4-5-.) r 
+    }
+    \new Voice { s4. | r2 }
+  >>
+  \change Staff = "lower"
+  a,4_3_. r |\break
   
-  g4_5 a8_4[ b_3] c_2 s4. |
-  r2 \stemNeutral b4_3-. r |
+  \shapeSlur #'(0 0 0 3.5 0 3.5 0 0)
+  g4_5( a8_4[ b_3] c_2
+  << 
+    {
+      \change Staff = "upper"
+      \override Fingering.staff-padding = #'()
+      d-2 e-3 fis-4 |
+      \override Fingering.staff-padding = #'1
+      g4-5-.) r
+    }
+    \new Voice { s4. | r2 }
+  >>
+  \change Staff = "lower"
+  b,4_3-. r |
   c4_2-. r g_5-. r |
   c2_2 r |\bar"|."
 }
@@ -86,3 +137,11 @@ lower = \relative c {
   }
   \midi { }
 }
+
+\markup { \vspace #1 }
+\markup { 参考: }
+\markup { 1、\with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/inside-the-staff#fingering-instructions" {
+    Fingering instructions
+  }
+}
+
