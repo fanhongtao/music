@@ -18,7 +18,16 @@ upper = \relative c'' {
   f8-3) f( d) d16-1( e-2 |
   f8-3) f( d) e16-3( d-2 |\break
   
-  c8-1) s c'8-5\fermata c16-3([ b-2] |
+  c8-1)
+  << 
+    {
+      \change Staff = "lower"
+      c8_1~ c\fermata
+    }
+    \new Voice { s8 c'8-5\fermata }
+  >>
+  \change Staff = "upper"
+   c16-3([ b-2] |
   a8-1) a-4( <e g>-1-3) f16-2( e-1 |
   a8-4) r r b,-2_. |
   <b d>4-2-4( c8-3) e'16-1([ f-2] |\break
@@ -44,8 +53,8 @@ lower = \relative c {
   r8 g_4([ b_2]) r |
   r8 g_4([ b_2]) r |\break
   
-  s8 c_1~ c\fermata r |
-  f,16_5( g_4 a_3 b_2 c8_1) r |
+  s8 s s r |
+  f16_5( g_4 a_3 b_2 c8_1) r |
   r8 \clef treble f16( d c8) r |
   \clef bass <f, g>4_1_2( e8_3) r |\break
   
