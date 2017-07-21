@@ -11,17 +11,29 @@ upper = \relative c'' {
   \keyTime
   \tempo "Allegretto"
   \override Hairpin.to-barline = ##f
+  \override Glissando.style = #'dashed-line
+  \override Glissando.breakable = ##t
+  \override Glissando.after-line-breaking = ##t
+  \override NoteColumn.ignore-collision = ##t
   
   \partial 8 d,8-1\mf |
   \repeat volta 2 {
     g4-3 fis8-2 g4-1 b8-3 |
     d4.-5~ d4 b8-3 |
     d4-5 b8 d4 b8 |
-    d4 c8-4 a4-2 r8 |\break
+    d4 c8-4 a4-2\glissando 
+    <<
+      { \change Staff = "lower" \stemUp d,8\glissando \stemNeutral }
+      \new Voice { r8 }
+    >> \change Staff = "upper" |\break
     
-    a8-2[ r a] a-2 g a |
+    a'8-2[ r a] a-2 g a |
     b8-3[ r d-5] g,4. |
-    a8-2[ b a] r4 d8-5 |
+    a8-2[ b a]\glissando
+    <<
+      { \change Staff = "lower" \hideNotes d,8\glissando \unHideNotes s }
+      \new Voice { r4 }
+    >> \change Staff = "upper" d'8-5 |
   }
   \alternative {
     {
@@ -39,7 +51,11 @@ upper = \relative c'' {
   
   <cis, g'>2.-2-5\sfz\> |
   d2.-1\! |
-  a'8-2[\mp b a] r4 d8-5 |
+  a'8-2[\mp b a]\glissando
+  <<
+    { \change Staff = "lower" \hideNotes d,8\glissando \unHideNotes s }
+    \new Voice { r4 }
+  >> \change Staff = "upper" d'8-5 |
   g,4. r4 r8 |
   <b g'>4.\ff q4. |
   <b, g'>4. ~ q4 \bar"|."
@@ -113,3 +129,8 @@ lower = \relative c {
   >>
   \midi { }
 }
+
+\markup { \vspace #1 }
+\markup { 注意： 这里使用了一些特殊技巧（TODO: 是否有更好的实现？）: }
+\markup { 1、 先使用 hideNote 命令让低音谱的 D 能正确显示。 }
+\markup { 2、 再设置 NoteColumn.ignore-collision 来规避 “ignoring too many clashing note columns” }
