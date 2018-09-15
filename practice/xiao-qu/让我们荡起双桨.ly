@@ -1,6 +1,8 @@
 \version "2.18.2"
 % 《新版 世界儿童钢琴名曲》 陈朗秋 周明哲 选编 P87~88
 
+\include "../../lib/slurs.ly"
+
 keyTime = {
   \key f \major
   \time 4/4
@@ -14,7 +16,7 @@ upper = \relative c'' {
   \tempo "Andante"
   \override Hairpin.to-barline = ##f
   
-  a'8-.-1 e'16-3( d c bes-4 a g a8 c16-.-3) bes a( g f e-2 |
+  a'8-.-1 e'16-3( d c bes-4 a g a8 c16-.-5) bes a( g f e-2 |
   f8-.) a16( g f e d c-2 d2) |
   r8 d,_2( f_1 g a4. c8 |\break
   
@@ -34,13 +36,8 @@ upper = \relative c'' {
     r8 g <bes d> g r f <a c> f |
     r8 <f a d>_. <g bes d>4_.\stemNeutral r2 |\break
     
-    r4 <<
-      { f8-2^( g a4-1\< \stemUp c8-2 c\! \stemNeutral }
-      \new Voice {
-        \stemDown f,8 e_2 d4_1 c
-      }
-    >> |
-    d'4 f e8\>[ d] c a\! |
+    r4 f8-2^( g a4-1\< \stemUp c8-2 c\! \stemNeutral |
+    d4 f e8\>[ d] c a\! |
   }
   \alternative {
     {
@@ -99,12 +96,22 @@ lower = \relative c {
     << g2( \sustainTwo >> a4.\sustainOn c8\sustainOff |
     d,8-.)\sustainOn f-.\sustainOff << g-. \sustainFour >> r2 |\break
     
-    c,1 |
-    bes'4 a g a8 c |
+    <<
+      \new Voice {
+        c,1
+      }
+      {
+        s4 \change Staff = "upper"
+        \shapeSlur #'(0 -5 0 -15 0 -11 0 -4)
+        \stemDown f'8( e_2 d4_1 c \stemNeutral
+        \change Staff = "lower"
+      }
+    >>|
+    bes4 a g a8 c |
   }
   \alternative {
     {
-      r8 a-2 g a d,2 |
+      r8 a-2 g a d,2) |
       a'8\sustainOn <e' c'>\sustainOff r q a,\sustainOn q\sustainOff r e' |\break
       d,8\sustainOn <a' c>\sustainOff r q d,4 <f a d>8 q |
       q8 r r4 r8 d( f g |
@@ -112,7 +119,7 @@ lower = \relative c {
     {
       << d'1) \new Voice { r8 \slurDown a_2( g a d,2) } >>
       s1 |
-      s2 \clef treble r8 a''_2(^\markup { \italic "rit."} g a |
+      s2 \clef treble r8 a''_2_(^\markup { \italic "rit."} g a |
       d,1) |
     }
   }
