@@ -27,4 +27,8 @@
 | [p50-bao-yu-mi-hua-de-ren.ly](practice/John-Thompson/modern-course-1/p50-bao-yu-mi-hua-de-ren.ly) | 1. Removing the key signature at the end of a line <br> 2. D.C.(Da Capo) al Fine ：再从乐曲的开始弹到 Fine 终止。|
 | [p65-hen-jiu-yi-qian.ly](practice/John-Thompson/modern-course-1/p65-hen-jiu-yi-qian.ly) | markup 中显示 score |
 | [p70-mo-tian-da-sha.ly](practice/John-Thompson/modern-course-1/p70-mo-tian-da-sha.ly) (log) | 使用 TextSpan 分类标注音符 |
+| [p03-在阿尔卑斯山上.ly](practice/John-Thompson/modern-course-2/p03-在阿尔卑斯山上.ly) | 指定休止符(rest)在五线谱中的位置 |
+| [p10-时辰之舞.ly](practice/John-Thompson/modern-course-2/p10-时辰之舞.ly) | 指法(Finger)的几种写法 |
+| [p14-遥远的钟声.ly](practice/John-Thompson/modern-course-2/p14-遥远的钟声.ly) | 踏板(pedal) |
+| [p20-带我回弗吉尼故乡.ly](practice/John-Thompson/modern-course-2/p20-带我回弗吉尼故乡.ly) | 只有一个音符的踏板(pedal)记号 |
 | [p72-南泥湾.ly](practice/gang-qin-ji-chu/1/p72-南泥湾.ly) | Grace notes |
