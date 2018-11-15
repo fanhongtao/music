@@ -41,7 +41,7 @@ upper = \relative c'' {
     a16 b cis d e cis b a gis8 b, a'16\f a32 b a16 gis |
     a16 a, e' a, a' a32 b a16 gis a a, e' a, a' a32 b a16 gis |\break
     
-    a16 b cis d e cis b a gis8 b, a'16\ff a32 b a16 gis |
+    a16 b cis d e cis b\mordent a gis8 b, a'16\ff a32 b a16 gis |
     a16 a, e' a, a' a32 b a16 gis a a, e' a, a' b a gis |\break
     
     a16\> b cis d e cis b a gis8-3\! b,_\rit gis-3 e~ |
@@ -80,7 +80,7 @@ lower = \relative c {
   \repeat volta 2 {
     fis,8 cis' fis4 d,8 a' e'4 |
     a,,8 e' cis'4 e,8 b' e4 |
-    d,8 cis' fis4 d,8 a' e'4 |\break
+    fis,8 cis' fis4 d,8 a' e'4 |\break
     
     a,,8 e' cis'4 e,8 b' gis'4 |
     fis,8 cis' fis4 d,8 a' e' d, |
@@ -88,7 +88,7 @@ lower = \relative c {
     
     fis,8 cis' fis4 d,8 a' e'4 |
     a,,8 e' cis'4 e,8 b' e4 |
-    fis,8 cis' fis fis, d a' fis' d, |\break
+    fis,8 cis' fis fis, d a' e' d, |\break
     
     a8 e' cis' a, e' b' e e, |
     fis cis' fis fis, d a' e' d, |\break
@@ -117,7 +117,7 @@ lower = \relative c {
   
   a8 e' cis'4 e,8 b' gis'4 |
   fis,,8 cis' fis4 d8 a' d4 |
-  a,8 e' cis4 e,8 b' gis'4\fermata |
+  a,8 e' cis'4 e,,8 b' gis'4\fermata |
   fis,8 cis' fis4 cis'2\fermata |\bar "|."
 }
 
