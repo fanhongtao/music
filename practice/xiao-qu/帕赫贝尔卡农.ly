@@ -187,11 +187,12 @@ lower = \relative c {
   
   <f a>4_1_3\sustainRestart f\sustainRestart <e g>_1_3\sustainRestart q\sustainRestart |
   <f a>4_1_2\sustainRestart q\sustainRestart g\sustainRestart g,\sustainRestart |
-  c8_5\sustainRestart g' r4 g,8_5\sustainRestart d' r4 |\break
+  \override Slur.control-points =  #'((0 . 4) (2 . 8) (8 . 4) (10 . 8))  % Note: 使用一个取巧的方法绘制跨五线谱(stave) 的连线(slur)。 正式的写法参见 easiest-piano-course-3 中的 p21-wan-za-shua-de-ren.ly（《玩杂耍的人》。
+  c8_5\sustainRestart( g' r4) g,8_5\sustainRestart( d' r4) |\break
   
-  a8_5\sustainRestart e' r4 e,8_5\sustainRestart b' r4 |
-  f8_5\sustainRestart c' r4 c,8_5\sustainRestart g' r4 |
-  f8_5\sustainRestart c' r4 g8_5\sustainRestart d' r4 |\break
+  a8_5\sustainRestart( e' r4) e,8_5\sustainRestart( b' r4) |
+  f8_5\sustainRestart( c' r4) c,8_5\sustainRestart( g' r4) |
+  f8_5\sustainRestart( c' r4) g8_5\sustainRestart( d' r4) |\break
   
   c2_1\sustainRestart g_2\sustainRestart |
   a2\sustainRestart e\sustainRestart |
