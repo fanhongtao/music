@@ -70,8 +70,8 @@ upper = \relative c'' {
   r8\p^\markup { \right-align \raise #3 "和弦名称：C" }  e,-1[( g-2 c-5)] r^\ChordG d,-1[( g-3 b-5)] |
   r8^\ChordAm c,-1[( e-2 a-5)] r^\ChordEm b,-1[( e-3 g)] |\break
   
-  r8^\ChordF a,-1( c-2 d) r^\ChordC g,-1( c-3 e) |
-  r8^\ChordF a,-1( c-2 d) r^\ChordG b-1( d-2 g) |
+  r8^\ChordF a,-1( c-2 f) r^\ChordC g,-1( c-3 e) |
+  r8^\ChordF a,-1( c-2 f) r^\ChordG b,-1( d-2 g) |
   e'8-5--^\ChordC g,-1 c-3 g-1 \stemDown d'-4--^\ChordG g,-1 b-2 g-1 |\break
   
   \stemUp c8-5--^\ChordAm e,-1 a-3 e-1 b'-4--^\ChordEm e,-1 g-2 e |
@@ -151,7 +151,7 @@ lower = \relative c {
   f2_3\sustainRestart g_2\sustainRestart |\break
   
   c'4_2\sustainRestart e_1\sustainRestart g,8_5\sustainRestart( b d b) |
-  b8_4\sustainRestart( c_2 e_1 c_2 e,_5\sustainRestart g b) r |\break
+  a8_4\sustainRestart( c_2 e_1 c_2 e,_5\sustainRestart g b) r |\break
   
     f8_4\sustainRestart[ a_2] c_1 r c,_5\sustainRestart[ e] g r |
   << 
