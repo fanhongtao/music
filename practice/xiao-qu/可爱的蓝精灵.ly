@@ -38,7 +38,7 @@ upper = \relative c'' {
   <e, g c>2-1-2-5~ |
   q4 <e g>4-1-3( |\break
   
-  q <c' e>8-3-5 q |
+  <f a> <c' e>8-3-5 q |
   <g c>4 <e g>-2-4 |
   <c e>2~ |
   q4) <e g>-2-4( |\break
