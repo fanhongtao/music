@@ -26,6 +26,30 @@ toCoda = {
   \mark \markup { { \lower #1 "To Coda " { \musicglyph #"scripts.coda"} } } 
 }
 
+upper_repeat = \relative c'' {
+  a'8\segno a a a fis g |
+  a4 a8 cis4. |
+  b8 b b b g8. b16 |\break
+  
+  a4.~ a |
+  a8 a a a cis b |
+  a8 g4 g4. |
+  g8 g g g fis8. e16 |
+  d4. e,16( fis a d e fis) |\bar"||"\break
+  
+  d'8 <fis, d'> q q a b |
+  q4 d8 <a fis'>4. |
+  e'8 <g, e'>q q d'8. cis16 |
+  <<
+    {d,16 fis b, e fis, cis' b4.}
+    \new Voice { \stemUp b'4.^~ b }
+  >>|
+  cis8 <fis, cis'> q q cis' d |\break
+  
+  <a e'>4. <e a> |
+  <e cis'>8 cis' d <a e'> d cis\toCoda |
+}
+
 upper = \relative c'' {
   \clef treble
   \keyTime
@@ -90,34 +114,16 @@ upper = \relative c'' {
   
   g8 g g g fis e |
   d4.~ d |\bar "||"
-  a''8\segno a a a fis g |
-  a4 a8 cis4. |
-  b8 b b b g8. b16 |\break
   
-  a4.~ a |
-  a8 a a a cis b |
-  a8 g4 g4. |
-  g8 g g g fis8. e16 |
-  d4. e,16( fis a d e fis) |\bar"||"\break
+  \upper_repeat
   
-  d'8 <fis, d'> q q a b |
-  q4 d8 <a fis'>4. |
-  e'8 <g, e'>q q d'8. cis16 |
   <<
-    {d,16 fis b, e fis, cis' b4.}
-    \new Voice { \stemUp b'4.^~ b }
-  >>|
-  cis8 <fis, cis'> q q cis' d |\break
-  
-  <a e'>4. <e a> |
-  <e cis'>8 cis' d <a e'> d cis\toCoda |
-  <<
-    { g16 cis b cis a cis g cis f,8 e }
-    \new Voice {
+    { g'16 cis b cis a cis g cis f,8 e }
+    \new Voice \relative c'' {
       \stemUp d'4.^~ d
     }
   >>|
-  d,16 a' gis a fis a e a d, cis b a |\break\pageBreak
+  d16 a' gis a fis a e a d, cis b a |\break\pageBreak
   
   a16 b a8 fis  a16 b cis8 a |
   a16 b a8 fis a4. |
@@ -127,6 +133,13 @@ upper = \relative c'' {
   
   <a fis'>8 a'4 a8 g16 fis e8~ |
   e8 g,16( a b cis d e fis g a b) |\bar"||"
+  
+  \tag #'midi {
+    \break
+    \upper_repeat
+  }
+  
+  \octaveCheck c'''
   <fis d'>4.\coda a,16( dis fis b cis dis) |\bar "||"
   \key e \major
   e8 <gis, e'> q q b cis |\break
@@ -135,15 +148,37 @@ upper = \relative c'' {
   fis8 <a, fis'> q q e' dis |
   << 
     { fis,8 e dis cis4.}
-    \new Voice {\stemUp cis'4.^~ cis}
+    \new Voice \relative c'' {\stemUp cis'4.^~ cis}
   >>|
-  dis8 <gis, dis'> q q dis' e |
+  dis'8 <gis, dis'> q q dis' e |
   <b fis'>4. <fis b> |\break
   
   <fis dis'>8 dis' e <b fis'> e dis |
   <a fis'>4.~ q |
   <fis gis b e>4.\arpeggio~ q~ |
   q4.~ q |\bar "|."
+}
+
+
+lower_repeat = \relative c {
+  d8\mf a' d e d a |
+  fis, fis' cis' fis cis a |
+  g,8 d' b' d b g |\break
+  
+  a,8 e' d' a' e a, |
+  d,8 a' d e d a |
+  a,8 g' b d b g |
+  g,8 b' d e, b' d |
+  d,8\< a' d a d a\! |\bar"||"\break
+  
+  d,,8\f d' a' e' d a |
+  b,8 fis' b fis d' e |
+  e,,8 e' b' e b g |
+  b,8 fis' b fis' d b |
+  fis,8 fis' a fis' cis a |\break
+  
+  a,8 a' cis a' e cis |
+  a,8 a' d a' e a, |
 }
 
 
@@ -211,24 +246,9 @@ lower = \relative c {
   
   g,8 b' d e, b' d |
   d,8 a' d e d a |
-  d,8\mf a' d e d a |
-  fis, fis' cis' fis cis a |
-  g,8 d' b' d b g |\break
   
-  a,8 e' d' a' e a, |
-  d,8 a' d e d a |
-  a,8 g' b d b g |
-  g,8 b' d e, b' d |
-  d,8\< a' d a d a\! |\bar"||"\break
+  \lower_repeat
   
-  d,,8\f d' a' e' d a |
-  b,8 fis' b fis d' e |
-  e,,8 e' b' e b g |
-  b,8 fis' b fis' d b |
-  fis,8 fis' a fis' cis a |\break
-  
-  a,8 a' cis a' e cis |
-  a,8 a' d a' e a, |
   <cis, g' c>4.~ q |
   d8 a' d\> e d a\! |\break
   
@@ -240,6 +260,12 @@ lower = \relative c {
   
   a8 d e a e d |
   <a cis e>4. a,8 e' a,\toSegno |\bar"||"
+  
+  \tag #'midi {
+    \break
+    \lower_repeat
+  }
+  
   d8\< a' d b, <fis' b> <b dis>\! |\bar"||"
   \key e \major
   e,,8\f e' b' fis' e b |\break
@@ -268,6 +294,8 @@ lower = \relative c {
     composer = "高晓松  曲"
     arranger = "Blueman 编配"
   }
+  \keepWithTag #'pdf
+  % \keepWithTag #'midi
   \new PianoStaff <<
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
@@ -280,6 +308,7 @@ lower = \relative c {
 
 \score {
   \unfoldRepeats
+  \keepWithTag #'midi
   \new PianoStaff <<
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
@@ -294,3 +323,10 @@ lower = \relative c {
   }
 }
 
+\markup {
+  注意： 第 66 小节，使用了 \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/changing-multiple-pitches#octave-checks" {
+     "\octaveCheck"
+  } 命令来确保 midi 文件中的音符正确。
+}
+% \markup { 这里利用了该命令的特性： will generate a warning (and change the pitch) }
+% \markup { 在生成 midi 文件时，得到的告警信息：Failed octave check, got: c''  }
