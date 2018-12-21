@@ -82,7 +82,7 @@ upper = \relative c'' {
       d4.~ d |
     }
     {
-      d4.~ d |
+      d4.~ d |\bar"||"
     }
   }
   d'8 d d d a b |
@@ -172,7 +172,7 @@ lower_repeat = \relative c {
   d,8\< a' d a d a\! |\bar"||"\break
   
   d,,8\f d' a' e' d a |
-  b,8 fis' b fis d' e |
+  b,8 fis' b fis d' fis |
   e,,8 e' b' e b g |
   b,8 fis' b fis' d b |
   fis,8 fis' a fis' cis a |\break
@@ -214,7 +214,7 @@ lower = \relative c {
       d,8 a' d e d a |
     }
     {
-      d,8\< a' d e fis a\! |
+      d,8\< a' d e fis a\! |\bar"||"
     }
   }
   d,,8\mf a' d e d a |
@@ -277,8 +277,8 @@ lower = \relative c {
   b,8 b' dis b' fis dis |\break
   
   b,8^\markup {\italic "rit."} b' e b' fis b, |
-  b,16 fis' dis' b' fis dis b dis fis b dis fis |
-  <e,,, e'>4.~ q~ |
+  b,16 fis' dis' b' fis dis \clef treble b dis fis b dis fis |
+  \clef bass <e,,, e'>4.~ q~ |
   q4.~ q |\bar "|."
 }
 
