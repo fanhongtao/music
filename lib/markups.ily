@@ -12,5 +12,5 @@ atempo = \markup { \italic { "a tempo" } }
 dimin = \markup { \italic { " dim." } }
 
 rit = \markup { \italic "rit." }
+pocof = \markup { \italic { "poco f" } }
 pocorit = \markup { \italic { "poco rit." } }
-
