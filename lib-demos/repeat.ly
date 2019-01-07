@@ -21,15 +21,19 @@ music = \relative {
   \override Score.RehearsalMark.direction = #DOWN % 显示在五线谱下方
   \repeatfine {
     \repeat volta 2 {
-      a'2 b c d % \toCoda 
+      a'2 b c d_\markup { 
+        \translate #'(-4 . -3)
+        \toCoda }
+      \bar ":|."
+      % \markup { \halign #-3 \toCoda}
+      % \markup { \raise #-3 \toCoda}
+      % \markup { \lower #3 \toCoda}
+      % \markup { \translate #'(-4 . -5) \toCoda }
     }
-    \alternative {
-      { e f }
-      { e c \once \override Score.RehearsalMark.extra-offset = #'( -1 . -1 ) \fine\bar"|." }
-    }
+    % \alternative { { e f } { e c_\fine \bar"|." } }
   }
   { 
-    d c b c\dcalFine
+    d c b c_\dcalFine \bar "||"
   }
 }
 

@@ -8,6 +8,11 @@
 %    http://lilypond.1069038.n5.nabble.com/D-C-al-fine-td186747.html
 %
 % 因为显示符号相对复杂，所以在函数中不提供显示符号的功能，而是在文件后面提供了一些显示的命令。
+%
+% 已知Bug: 
+%  1. 编译时会提示： warning: cannot end volta spanner ，不过不影响使用
+%  2. 如果 firstpart 恰好是以一个 \repeat volta x 结尾，该 repeat 的重复小节线 ":|"  
+%     会被替换成普通的竖线 "|" ，这时，需要手工指定 \bar ":|." 
 repeatfine =
 #(define-music-function (parser location firstpart secondpart)
 (ly:music? ly:music?)
@@ -20,30 +25,35 @@ repeatfine =
          \set Score.repeatCommands = #'((volta #f))
          $secondpart
        }
-       { }
+       {
+         \set Score.repeatCommands = #'((volta #f))
+       }
      }
    #})
 
 
 % 提供一些重复标记
-% 如果显示的位置不合适，可以参考命令定义，在自己的代码中使用进行一些调整。
-% 如:  \once \override Score.RehearsalMark.direction = #DOWN \dcalFine
-symbol = #(define-music-function (parser location label) (markup?)
-  #{
-    % the align part
-    \once \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
-    % \once \override Score.RehearsalMark.direction = #DOWN
-    \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-    
-    \once \override Score.RehearsalMark.font-size = #-1
-    % \once \override Score.RehearsalMark.extra-offset = #'( -1 . -1 )
-    \mark \markup { \italic { $label } }
-  #})
+% 如果显示的位置不合适，可以参考 
+%   http://lilypond.org/doc/v2.18/Documentation/notation/formatting-text#text-alignment 
+% 中的例子，进行移动。
+% 如:  \markup { \translate #'(-4 . -5) \toCoda }
+% 
+% Unlike text scripts, rehearsal marks cannot be stacked at a particular
+% point in a score: only one RehearsalMark object is created.
+% 前一版本使用 \mark \markup { ... } ，导致四手联弹曲子中只能显示一个 D.C. al Fine ，
+% 所以现在将其定义为 \markup { ... }
+#(define-markup-command (repeatSymbol layout props text) (markup?)
+  (interpret-markup layout props
+    #{
+      \markup {
+        \italic { $text }
+      }
+    #}))
 
-dc = \symbol #"D.C."
-ds = \symbol #"D.S."
-dcalFine = \symbol #"D.C. al Fine"
-dsalCoda = \symbol #"D.S. al Coda"
-dsalFine = \symbol #"D.S. al Fine"
-fine = \symbol #"Fine"
-toCoda = \symbol \markup { { \lower #1 "To Coda " { \musicglyph #"scripts.coda"} } } 
+dc = \markup \repeatSymbol #"D.C."
+ds = \markup \repeatSymbol #"D.S."
+dcalFine = \markup \repeatSymbol #"D.C. al Fine"
+dsalCoda = \markup \repeatSymbol #"D.S. al Coda"
+dsalFine = \markup \repeatSymbol #"D.S. al Fine"
+fine   = \markup \repeatSymbol #"Fine"
+toCoda = \markup \repeatSymbol { \lower #1 "To Coda " { \musicglyph #"scripts.coda"} }
