@@ -60,7 +60,7 @@ upperOne = \relative c'' {
       
       f4->-3\f f8.-> f16 f4-> f16->-3 a-5( g f |
       e8-.\p) c16-._\dolce c-. c8-. c-. c-. c-. c-. c-. |
-      a'8-.-> c,16 c c8 c a'8( c b a |
+      a'8-.-> c,16 c c8 c a'8(_\crescendo c b a |
       g8-.-1) e'16-4( d c b a-3 g f8-.) d'16-4( c b a g-3 f |\break
       
       e8-.) c'16-5 b a g f-1 e-3 d c b-3 a g-1 f-4 e-3 d |
@@ -70,7 +70,7 @@ upperOne = \relative c'' {
   {
     \key f \major
     \repeat volta 2 {
-      c,8-.-1\p^\boxB c16-1(_\dolce f-2 a8-.-4) a-. a4.( g16 f |
+      \bar ".|:" c,8-.-1\p^\boxB c16-1(_\dolce f-2 a8-.-4) a-. a4.( g16 f |
       e8-.-1) e16-1( g-2 c8-.-5) c-. c4.( bes16 g |
       f8) r d'16-5(_\crescendo c-4 d c g8) r d'16-4( c-3 d c |\break
       
@@ -177,7 +177,7 @@ upperTwo = \relative c' {
       r8\p <c e>-._\dolce q-.[ q-.] q-. q-. q-. q-. |\break
       <g b d>4\f q8. q16 q4 r |
       r8\p <c e>-._\dolce q-.[ q-.] q-. q-. q-. q-. |
-      r8 <a c f>16-.-1-2-4 q-. q8-. q-. <c f>8-1-3 a' g f |
+      r8 <a c f>16-.-1-2-4 q-. q8-. q-. <c f>8-1-3_\crescendo a' g f |
       <c e>4-1-2 r <a d>-1-4 r |\break
       
       <c e>4-1-3_\dimin r <b d f>-1-2-4 r |
@@ -187,7 +187,7 @@ upperTwo = \relative c' {
   {
     \key f \major
     \repeat volta 2 {
-      r8^\boxB <a c>-.-1-3_\dolce q-.[ q-.] r q-. q-.[ q-.] |
+      \bar ".|:" r8^\boxB <a c>-.-1-3_\dolce q-.[ q-.] r q-. q-.[ q-.] |
       r8 <bes c>-.-2-3 q-.[ q-.] r q-. q-.[ q-.] |
       r8 <a c>-._\crescendo q-.[ q-.] r <bes c>-. q-.[ q-.] |\break
       
@@ -202,12 +202,12 @@ upperTwo = \relative c' {
       <c e>8-2-4^\boxC g q g q g q g |
       <d' f>8-3-5 g, q g q g q g |
       <c e>8-3-5 g q g <c e>-2-5 g q g |
-      \change Staff="lowerII" \stemUp <a c>8-2-4 f q f q f q f | %\break
+      s1 |
       
-      r8^\p <a c>^. q^.[ q^.] r q^. q^.[ q^.] |
-      r8 <bes d>^. q^.[ q^.] r q^. q^.[ q^.] |
-      r8 <a c>^. q^.[ q^.] r <g bes>^.-2-4 q^.[ q^.] |
-      <f a>8^\f c' q c q4 r^\markup { \translate #'(4 . -3) \dcalFine } |\bar"||"
+      s1 |
+      s1 |
+      s1 |
+      s1 |\bar"||"
     }
   }
 }
@@ -259,12 +259,24 @@ lowerTwo = \relative c {
       c''1 |
       g1 |
       c1 |
-      \stemDown f,1 |%\break
       
-      f2_5 f |
-      bes2_2 bes |
-      c2 c, |
-      <f, f'>4 q q s |
+      <<
+        {
+          \stemUp <a' c>8-2-4 f q f q f q f | %\break
+          
+          r8^\p <a c>^. q^.[ q^.] r q^. q^.[ q^.] |
+          r8 <bes d>^. q^.[ q^.] r q^. q^.[ q^.] |
+          r8 <a c>^. q^.[ q^.] r <g bes>^.-2-4 q^.[ q^.] |
+          <f a>8^\f c' q c q4 r^\markup { \translate #'(12 . 3) \dcalFine } 
+        } \\ {
+          \stemDown f,,1 |%\break
+          
+          f2_5 f |
+          bes2_2 bes |
+          c2 c, |
+          <f, f'>4 q q s |
+        }
+      >>
     }
   }
 }

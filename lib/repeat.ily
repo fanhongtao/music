@@ -12,7 +12,9 @@
 % 已知Bug: 
 %  1. 编译时会提示： warning: cannot end volta spanner ，不过不影响使用
 %  2. 如果 firstpart 恰好是以一个 \repeat volta x 结尾，该 repeat 的重复小节线 ":|"  
-%     会被替换成普通的竖线 "|" ，这时，需要手工指定 \bar ":|." 
+%     会被替换成普通的竖线 "|" ，这时，需要手工指定 \bar ":|."
+%  3. 如果 secondpart 恰好是以一个 \repeat volta x 开头，该 repeat 的重复小节线 "|:"
+%     会被替换成普通的竖线 "|" ，这时，需要手工指定 \bar ".|:"
 repeatfine =
 #(define-music-function (parser location firstpart secondpart)
 (ly:music? ly:music?)
