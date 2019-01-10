@@ -1,5 +1,8 @@
 \version "2.18.2"
 
+songName = "同桌的你"
+\include "../lib/paper-footer.ily"
+
 keyTime = {
   \key d \major
   \time 6/8

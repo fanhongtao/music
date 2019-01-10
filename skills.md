@@ -23,7 +23,7 @@
 | [p13-huang-shu-lang-tao-pao-le.ly](practice/John-Thompson/easiest-piano-course-3/p13-huang-shu-lang-tao-pao-le.ly) | 歌词(lyrics)不占用整个 slur ，而是只对应一个音符 |
 | [p30-xian-nv-de-shu-qin.ly](practice/John-Thompson/modern-course-1/p30-xian-nv-de-shu-qin.ly) (log) | midi 中“正确”记录“琶音”(arpeggio) |
 | [p45-mao-tou-ying-de-wen-ti.ly](practice/John-Thompson/modern-course-1/p45-mao-tou-ying-de-wen-ti.ly) | midi 中“正确”记录连续多个 “渐弱记号”(decrescendo) |
-| [p49-sheng-ri-dan-gao.ly](practice/John-Thompson/modern-course-1/p49-sheng-ri-dan-gao.ly) | 1. 在乐曲中间实现不完全小节(Time administration) <br> 2. D.S.(Dal Segno) al Fine ：再从 segno 记号开始弹到 Fine 终止|
+| [p49-sheng-ri-dan-gao.ly](practice/John-Thompson/modern-course-1/p49-sheng-ri-dan-gao.ly) | 1. 在乐曲中间实现不完全小节(Time administration) <br> 2. D.S.(Dal Segno) al Fine ：再从 segno 记号开始弹到 Fine 终止 <br> 3. 音符带有括号 |
 | [p50-bao-yu-mi-hua-de-ren.ly](practice/John-Thompson/modern-course-1/p50-bao-yu-mi-hua-de-ren.ly) | 1. Removing the key signature at the end of a line <br> 2. D.C.(Da Capo) al Fine ：再从乐曲的开始弹到 Fine 终止。|
 | [p65-hen-jiu-yi-qian.ly](practice/John-Thompson/modern-course-1/p65-hen-jiu-yi-qian.ly) | markup 中显示 score |
 | [p70-mo-tian-da-sha.ly](practice/John-Thompson/modern-course-1/p70-mo-tian-da-sha.ly) (log) | 使用 TextSpan 分类标注音符 |

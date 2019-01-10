@@ -12,14 +12,14 @@ upper = \relative c'' {
   %\tempo 4=120
   \slurUp
 
-  d4(\p g,8 a b c |
-  d4) g,4-. g-. |
-  e'4(\< c8 d e fis\! |
-  g4) g,-. g-. |\break
+  d4-5(\p g,8 a b c |
+  d4-.) g,4-. g-. |
+  e'4-3( c8 d e fis |
+  g4-.) g,-. g-. |\break
   
-  c4( d8 c b a |
-  b4) c8( b a g |
-  fis4) g8(\< a b g\! |
+  c4-4( d8 c b a |
+  b4 c8 b a g |
+  fis4-2) g8-1(\< a b g\! |
   a2.) |\break
   
   d4( g,8 a b c |
@@ -58,8 +58,8 @@ lower = \relative c {
   \key g \major
   \time 3/4
 
-  << { b'2( } { g } >>  a4 |
-  b2.) |
+  << { d'2 } { b } { g } >>  a4 |
+  b2. |
   c2. |
   b2. |\break
   
@@ -109,4 +109,15 @@ lower = \relative c {
   \midi { }
 }
 
-% http://www.8notes.com/scores/2402.asp
+% First edition from
+%    http://www.8notes.com/scores/2402.asp
+
+% Andrew Bernard <andrew.bernard@gmail.com>, a harpsichordist, mentioned in a mail to me that the Minuet was BVW Anhang 114. And I find in
+%    https://en.wikipedia.org/wiki/Minuet_in_G_major,_BWV_Anh._114
+% The Minuet in G major is a keyboard piece included in the 1725 Notebook for Anna Magdalena Bach. Until 1970 it was attributed to Johann Sebastian Bach (BWV Anh. 114), but it is now universally attributed to Christian Petzold. 
+
+% Andrew also gave me two links:
+% * A modern edition:
+%     http://imslp.org/wiki/Minuet_in_G_major_(Pezold,_Christian)
+% * What Bach wrote in his notebook of 1725
+%     http://www.bach-digital.de/rsc/viewer/BachDigitalSource_derivate_00003221/db_bachp0225_page044.jpg
