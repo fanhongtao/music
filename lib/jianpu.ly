@@ -319,7 +319,7 @@ jianpuMusic =
               (ly:grob-set-property! grob 'stencil
                 (grob-interpret-markup grob
                   ;; TODO: scale the flat or sharp size, based on current font size
-                  (markup key-sig-number-string "=" key-sig-note key-sig-alt)
+                  (markup key-sig-number-string "=" key-sig-alt key-sig-note)
                   )))))))))
 
 
