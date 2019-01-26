@@ -20,7 +20,8 @@ upper = \relative c'' {
   \keyTime
   \tempo "行进速度 精神饱满地" 4=108
   \override Hairpin.to-barline = ##f
-  
+  \repeat volta 2 {
+
   c2-5\f |
   g4-3 e-2 |
   c4-1( d |
@@ -77,7 +78,8 @@ upper = \relative c'' {
   e'8.\ff e16 d8 c |
   <f, a>8-1-2 r <f g b>-1-2-4 r |
   <e g c>2-1-2-5~ |
-  q4 r |\bar "|."
+  q4 r |
+  }
 }
 
 lower = \relative c {
@@ -86,6 +88,7 @@ lower = \relative c {
   \override Hairpin.to-barline = ##f
   \dynamicUp
   
+  \repeat volta 2 {
   c8[ <e g> g, q] |
   c8[ q g q] |
   c8[ q b <d g>] |
@@ -142,7 +145,126 @@ lower = \relative c {
   g,4 <e' g c> |
   g,4 <g' b d> |
   <c,, c'>4 <e' g c>8 q |
-  q4-> r |\bar "|."
+  q4-> r |
+  }
+}
+
+text_one = \lyricmode {
+  我 |
+  们 是 |
+  \set ignoreMelismata = ##t
+  共 产 |
+  主 义 |
+  接 _ |\break
+  
+  班  _ _ |
+  人， |
+  _ 继 承 |
+  革 命 |
+  先 辈 的 |
+  光 荣 |\break
+  
+  传 _ _ |
+  统, |
+  _ 爱 _ |
+  祖 国,
+  爱 |
+  人 _ |\break
+  
+  民, 鲜 |
+  艳 的 |
+  红 领 巾 |
+  飘 _ |
+  扬 在 |\break
+  
+  前 _ 胸。 _ |
+  不 怕 困 |
+  难， |
+  不 怕 敌 |
+  人， |\break
+  
+  顽 强 学 |
+  习， |
+  坚 决 斗 _ |
+  争。 |
+  向 着 |
+  胜 利 |\break
+  
+  勇 敢 |
+  前 _ 进， |
+  向 着 |
+  胜 利 勇 敢 |
+  前 进 前 _ |\break
+  
+  进， 向 着 |
+  胜 |
+  利 _ |
+  勇 敢 前 _ |
+  进， |\break
+  
+  我 们 是 |
+  共 产 主 义 |
+  接 班 |
+  人。
+}
+
+text_two = \lyricmode {
+  我 |
+  们 是 |
+  \set ignoreMelismata = ##t
+  共 产 |
+  主 义 |
+  接 _ |\break
+  
+  班  _ _ |
+  人， |
+  _ 沿 着 |
+  革 命 |
+  先 辈 的 |
+  光 荣 |\break
+  
+  路 _ _ |
+  程, |
+  _ 爱 _ |
+  祖 国,
+  爱 |
+  人 _ |\break
+  
+  民, 少先 |
+  队 员 |
+  是 我 们 |
+  骄 _ |
+  傲 的 |\break
+  
+  名 _ 称。 _ |
+  时 刻 准 |
+  备， |
+  建 立 功 |
+  勋， |\break
+  
+  要 把 敌 |
+  人， |
+  消 灭 干 _ |
+  净。 |
+  为 着 |
+  理 想 |\break
+  
+  勇 敢 |
+  前 _ 进， |
+  为 着 |
+  理 想 勇 敢 |
+  前 进 前 _ |\break
+  
+  进， 为 着 |
+  理 |
+  想 _ |
+  勇 敢 前 _ |
+  进， |\break
+  
+  我 们 是 |
+  共 产 主 义 |
+  接 班 |
+  人。
 }
 
 
@@ -150,8 +272,10 @@ lower = \relative c {
   \keepWithTag #'pdf
   % \keepWithTag #'midi
   \new PianoStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
+    \new Staff = upper { \new Voice = "singer" \upper }
+    \new Lyrics \lyricsto "singer" \text_one
+    \new Lyrics \lyricsto "singer" \text_two
+    \new Staff = lower { \lower }
   >>
   \layout {
     % indent = 0\cm
