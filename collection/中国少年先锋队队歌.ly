@@ -1,5 +1,13 @@
 \version "2.18.2"
 
+% \paper  {
+%   #(define fonts
+%     (make-pango-font-tree "楷体" ;;"Times New Roman"
+%                           "Nimbus Sans"
+%                           "Luxi Mono"
+%                           (/ staff-height pt 20)))
+% }
+
 songName = "中国少年先锋队队歌"
 \include "../lib/paper-footer.ily"
 
@@ -150,6 +158,7 @@ lower = \relative c {
 }
 
 text_one = \lyricmode {
+  % \override LyricText.font-name = #"楷体"
   我 |
   们 是 |
   \set ignoreMelismata = ##t
@@ -209,6 +218,7 @@ text_one = \lyricmode {
 }
 
 text_two = \lyricmode {
+  % \override LyricText.font-name = #"楷体"
   我 |
   们 是 |
   \set ignoreMelismata = ##t
@@ -272,13 +282,20 @@ text_two = \lyricmode {
   \keepWithTag #'pdf
   % \keepWithTag #'midi
   \new PianoStaff <<
-    \new Staff = upper { \new Voice = "singer" \upper }
+    \new Staff = "upper" { \new Voice = "singer" \upper }
     \new Lyrics \lyricsto "singer" \text_one
-    \new Lyrics \lyricsto "singer" \text_two
-    \new Staff = lower { \lower }
+    \new Lyrics \lyricsto "singer" { 
+      % \override LyricText.font-name = #"楷体"
+      \text_two
+    }
+    \new Staff = "lower" \lower
   >>
   \layout {
     % indent = 0\cm
+    \context {
+      \Lyrics
+      \override LyricText.font-name = #"楷体"
+    }
   }
   % \midi { }
 }
