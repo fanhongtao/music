@@ -1,4 +1,10 @@
 \version "2.18.2"
+\paper  {
+  #(define fonts
+    (make-pango-font-tree
+       "楷体" ;; "Century Schoolbook L"
+       "sans-serif" "monospace" (/ staff-height (* 20 pt))))
+}
 
 songName = "歌 曲 名 称"
 \include "lib/paper-footer.ily"
