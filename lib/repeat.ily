@@ -59,3 +59,26 @@ dsalCoda = \markup \repeatSymbol #"D.S. al Coda"
 dsalFine = \markup \repeatSymbol #"D.S. al Fine"
 fine   = \markup \repeatSymbol #"Fine"
 toCoda = \markup \repeatSymbol { \lower #1 "To Coda " { \musicglyph #"scripts.coda"} }
+
+
+% 提供一些重复标记
+% 如果显示的位置不合适，可以参考命令定义，在自己的代码中使用进行一些调整。
+% 如:  \once \override Score.RehearsalMark.direction = #DOWN \dcalFine-mark
+define-mark-symbol = #(define-music-function (parser location label) (markup?)
+  #{
+    % the align part
+    \once \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
+    % \once \override Score.RehearsalMark.direction = #DOWN
+    \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
+    
+    \once \override Score.RehearsalMark.font-size = #-1
+    % \once \override Score.RehearsalMark.extra-offset = #'( -1 . -1 )
+    \mark \markup { \italic { $label } }
+  #})
+dc-mark = \define-mark-symbol #"D.C."
+ds-mark = \define-mark-symbol #"D.S."
+dcalFine-mark = \define-mark-symbol #"D.C. al Fine"
+dsalCoda-mark = \define-mark-symbol #"D.S. al Coda"
+dsalFine-mark = \define-mark-symbol #"D.S. al Fine"
+fine-mark = \define-mark-symbol #"Fine"
+toCoda-mark = \define-mark-symbol \markup { { \lower #1 "To Coda " { \musicglyph #"scripts.coda"} } } 
