@@ -71,7 +71,7 @@ define-mark-symbol = #(define-music-function (parser location label) (markup?)
     % \once \override Score.RehearsalMark.direction = #DOWN
     \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
     
-    \once \override Score.RehearsalMark.font-size = #-1
+    % \once \override Score.RehearsalMark.font-size = #1
     % \once \override Score.RehearsalMark.extra-offset = #'( -1 . -1 )
     \mark \markup { \italic { $label } }
   #})
