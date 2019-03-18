@@ -12,7 +12,7 @@ upper = \relative c'' {
   \clef treble
   \key g \major
   \time 2/4
-  \tempo "快速 有力"
+  \tempo "快速 有力" 4=160 
   \override Hairpin.to-barline = ##f
   
   g4-4\f( g8-5 b,-1 |

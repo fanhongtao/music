@@ -14,7 +14,7 @@ keyTime = {
 upper = \relative c'' {
   \clef treble
   \keyTime
-  \tempo "Allegretto"
+  \tempo "Allegretto" 4=120
   \override Hairpin.to-barline = ##f
   
   \repeat volta 2 {
