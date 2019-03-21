@@ -22,24 +22,24 @@ upper = \relative c'' {
   r4 r8 r |
   R2 |
   g8-.[ e' d c] |
-  g4. g16 g |\break
+  g4. g16-3 g-2 |\break
   
-  g8[ e' d c] |
-  a4. a16 a |
+  g8-1[ e' d c] |
+  a4. a16-3 a-2 |
   a8[ f' e d] |
-  b4. g'16 g |
-  g8[ g f d] |\break
+  b4. g'16-5 g-4 |
+  g8-3[ g-5 f-4 d] |\break
   
-  e4. g,16 g |
-  g8[ e' d c] |
+  e4.-3 g,16-3 g-2 |
+  g8-1[ e' d c] |
   g4. g16 g |
   g8[ e' d c] |
   a4. a16 a |\break
   
   a8[ f' e d] |
-  g8[ g g g] |
-  a8[ g f d] |
-  c2 |
+  g8-5[ g-4 g-3 g-4] |
+  a8-5[ g-4 f-3 d-2] |
+  c2-1 |
   \repeat volta 2 {
     e8 e e4 |\break
     
@@ -62,7 +62,7 @@ upper = \relative c'' {
     g8[ g f d] |
     c2 |
   }
-  g'4. g8 |
+  g'4.-2 g8 |
   a4 b |
   c4. g8-. |\break
   
@@ -80,8 +80,8 @@ lower = \relative c {
   \override Hairpin.to-barline = ##f
   \dynamicUp
   
-  c'8-.[ <e g>-. g,-. q-.] |
-  c8-.[ <e g>-. g,-. q-.] |
+  c'8-._4[ <e g>-._1_2 g,-._5 q-._1_2] |
+  c8-._4[ <e g>-. g,-. q-.] |
   c8-.[ <e g>-. g,-. q-.] |
   g8-.[ <c e>-. g-. q-.] |\break
   
