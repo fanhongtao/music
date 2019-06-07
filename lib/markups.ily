@@ -13,6 +13,8 @@ crescendo  = \markup { \italic { "cresc." } }
 % 所以这里定义一个 dimin ，命名来自　http://lsr.di.unimi.it/LSR/Snippet?id=935
 dimin = \markup { \italic { "dim." } }
 
+diminuendo = \markup { \italic { "dimin." } }
+
 dolce = \markup { \italic { "dolce" } }
 
 rit = \markup { \italic "rit." }
