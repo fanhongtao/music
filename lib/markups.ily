@@ -20,3 +20,15 @@ dolce = \markup { \italic { "dolce" } }
 rit = \markup { \italic "rit." }
 pocof = \markup { \italic { "poco f" } }
 pocorit = \markup { \italic { "poco rit." } }
+
+
+%
+% 带圈的指法 ( rounded box finger ): 
+% 用于记录 钢琴老师 在谱子上添加的指法。
+% 通过看指法有无圈，来区分是老师标注的指法 还是 原谱标注的指法。
+rfinger = #(define-music-function (parser location label) (markup?)
+  #{
+    \finger\markup { \rounded-box { $label } }
+    % 如果不想显示 round finger，可以将上一行注释掉，然后使用下一行。
+    % \finger ""
+  #})

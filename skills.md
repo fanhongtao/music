@@ -33,3 +33,4 @@
 | [p20-带我回弗吉尼故乡.ly](practice/John-Thompson/modern-course-2/p20-带我回弗吉尼故乡.ly) | 只有一个音符的踏板(pedal)记号 |
 | [p72-南泥湾.ly](practice/gang-qin-ji-chu/1/p72-南泥湾.ly) | Grace notes |
 | [帕赫贝尔卡农.ly](practice/xiao-qu/帕赫贝尔卡农.ly) | 1. 隐藏小节线<br> 2. 一个2分音符对应两个踏板(pedal)记号<br> 3. 取巧的方法绘制跨五线谱(stave) 的连线(slur)。 |
+| [六级B组-2.-二部创意曲(No.13).ly](考级/社会艺术水平/六级/六级B组-2.-二部创意曲(No.13).ly) | 1. 取巧的方法绘制跨五线谱(stave) 的连线(slur)。<br> 2. 修改五线谱之间的间距<br> 3. 使用带圈的数字来标识老师添加的指法 |
