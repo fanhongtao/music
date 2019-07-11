@@ -43,12 +43,12 @@ upper = \relative c'' {
   a,8-. fis'->-5~ fis16 d-4 b d g,8-. e'->~ e16 c-4 a c |
   fis,16 g' fis e dis-2 fis-4 b, dis-3 e8-.\f r r4 |\break
   
-  r16\p g-2_\markup { \italic "legg." } bes g e g-5 cis,-2 e-3 g e cis e a, r r8 |
-  r16 f'-2 a f d f-5 b,-2 d-4 f d b d g, r r8 |
-  r16 e'-2 g e c e-5 a,-2 c-4 dis-5 c a c fis,-1 r r8 |\break
+  r16\p g-2_\markup { \italic "legg." }-\shape #'((0 . 0) (1 . -2) (0 . 2) (0 . -3))_\( bes g e g-5 cis,-2 e-3 g e cis e a, r r8 |
+  r16\) f'-2-\shape #'((0 . 0) (1 . -2) (0 . 2) (0 . -3))_\( a f d f-5 b,-2 d-4 f d b d g, r r8 |
+  r16\) e'-2-\shape #'( ((0 . -1) (1 . -3) (0 . -1) (0 . -6)) ((0 . -5) (0 . -4) (0 . -4) (0 . -6)) )_\( g e c e-5 a,-2 c-4 dis-5 c a c fis,-1 r r8 |\break
   
-  r16 d'!-2 f d b d-5 gis,-2 b-3 d b gis b e, r r8 |
-  r16 e-1\p_( a-2 c b e, b'-2 d c8_.) a_. gis_.-2 e_. |
+  r16\) d'!-2-\shape #'((0 . 0) (1 . -2) (0 . 2) (0 . -3))_\( f d b d-5 gis,-2 b-3 d b gis b e, r r8 |
+  r16\) e-1\p_( a-2 c b e, b'-2 d c8_.) a_. gis_.-2 e_. |
   a16-2 c-4 e-5 c-3 a-1 c-5 fis,-2 a-3 c a fis a dis,-1 c'-5 b a |\break
   
   gis16-2 b-3 d! b gis b-4 d, f!-2 gis-4 f d f-4 b, f'-4 e d |
@@ -104,7 +104,9 @@ lower = \relative c {
 \score {
   \keepWithTag #'pdf
   % \keepWithTag #'midi
-  \new PianoStaff <<
+  \new PianoStaff \with {
+    \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+  } <<
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
   >>
@@ -123,3 +125,7 @@ lower = \relative c {
   >>
   \midi { }
 }
+
+% see:
+% http://lilypond.org/doc/v2.18/Documentation/notation/modifying-shapes
+% http://lilypond.org/doc/v2.18/Documentation/notation/flexible-vertical-spacing-within-systems
