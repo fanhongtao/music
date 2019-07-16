@@ -20,7 +20,7 @@ upper = \relative c'' {
   \tempo 4=80
   \override Hairpin.to-barline = ##f
   
-  e,4 e f g |
+  e,4-3 e f g |
   g4 f e d |
   c4 c d e |
   e4. d8 d2 |\break
@@ -33,7 +33,7 @@ upper = \relative c'' {
   d4 d e c |
   d4 e8 f e4 c |
   d4 e8 f e4 d |
-  c4 d g, e'( |\break
+  c4-1 d-2 g,-1 e'-3( |\break
   
   e4) e f g |
   g4 f e d |
@@ -63,26 +63,26 @@ lower = \relative c {
   g2 f |\break
   
   g2 a |
-  b2 g |
-  e2 d |
-  g2 e |\break
+  b2-1 g-2 |
+  e2-3 d-4 |
+  g2-1 e-3 |\break
   
   f2 g |
   f2 g |
   f2 g |
-  e2 b4 g' |\break
+  e2-3 b4-5 g'-1 |\break
   
-  g2 a |
+  g2-3 a |
   b2 g |
   e2 f |
   g2 e |\break
   
+  f2-2 g |
   f2 g |
   f2 g |
-  f2 g |
-  e2 b4 g' |\break
+  e2-3 b4_5 g'_1 |\break
   
-  g2 a |
+  g2-3 a |
   b2 g |
   e2 f |
   g2 e |\bar "|."
