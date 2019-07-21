@@ -31,34 +31,34 @@ upper = \relative c'' {
     a16\< b c-1 cis d e f\! d-3 |
     c!16\> b a_2 g\) <e' g>8-.\p q-. |\break
     
-    <c e>8-. r <f a>-.-4-5_\crescendo q-. |
+    <c e>8-. r <f a>-.-\rfinger"3"-5_\crescendo q-. |
     <b, d>8-.-1-2 r^\mf a'16->-4\( g f e |
-    cis16-2 d e f a,-1 c! b d |
+    cis16-2 d-\rfinger"3" e f a,-1 c!-\rfinger"3" b d |
     c8\) r
   }
   e16\mp-2\<( fis g-.) g-.-3\! |
   a16-4\>( g fis e\!) d-.-3\< d-.-2 d-.-1 d-.-2\! |\break
   
   e16-4\>( d c b\!) e'->-4_\crescendo\( d c b |
-  gis16-2 a b c e,-1 fis-3 g! a |
+  gis16-2 a-\rfinger"3" b c e,-1 fis-3 g! a |
   g16\> fis e d-.\) <b' d>8-.-3-5\p q-. |
   <g b>8-.-1-3\p r <a c>-.-3-5 q-. |
   <fis a>8-.-2-4 r g16-3_\crescendo-\shape #'( ((0 . 0) (1 . 2) (0 . 2) (2 . 2)) ((0 . 3) (1 . 2) (0 . 2) (-1 . -1)) )\( a b g-4 |\break
   
   dis16-2 e g e-4 d! b-1 c-4 a-2 |
-  g8-.\) r g16-1\p\( a b c |
+  g8-.\) r g16-1\p\( a-\rfinger"2" b-\rfinger"3" c-\rfinger"4" |
   d8-.\) r b16-1\<\( c d e\! |
   f!8-.\) r d16-1\<\( e f g\! |
   a8-.\)\>_\pocorit aes-.\( g-. fis-. |
   f!8--\)\! r <e g>-.\p^\atempo q-. |\break
   
   <c e>8-. r <d f>-. q-. |
-  <b d>8-. r c16\( d e c |
+  <b d>8-. r c16-\rfinger"3"\( d e c |
   a16\< b c cis d e f d\! |
   \stemDown c!16\> b a g-.\!\) \stemNeutral <e' g>8-.\p q-. |
   <c e>8-. r <f a>-._\crescendo q-. |\break\pageBreak
   
-  <b, d>8-. r a'16->\mf\( g f e |
+  <b, d>8-.-\rfinger"1"-\rfinger"2" r a'16->\mf-\rfinger"4"\( g f e |
   cis16\mf d e f a,\> c! b\! d |
   c8-.\) r^\markup { \bold "M.T."} r4 |
   e16-3^\p( dis f e-.) r4 |
@@ -96,30 +96,30 @@ upper = \relative c'' {
   
   c!16 b a g\!\) <e' g>8-. q-. |
   <c e>8-. r <f a>-._\crescendo q-. |
-  <b, d>8-. r a'16->-\tweak X-offset #-4 ^\mf\( g f e |
+  <b, d>8-. r a'16->-\rfinger"4"-\tweak X-offset #-4 ^\mf\( g f e |
   cis16 d e f a,\> c! b\! d |
   c8-.\) r b16-1-\tweak X-offset #-2 ^\p\( f'-4 d-2 b |\break
   
   a'16->-5 g f e d f-4 d-2 b |
   a'16 g f e d'->-5_\crescendo c b a-.\) |
   a16->-4( g f e-.) e->-4\( d c b |
-  d8-3\)\> c-.\! b16\p\( f' d b |\break
+  d8-3\)\> c-.\! b16\p-\rfinger"1"\( f'-\rfinger"4" d b |\break
   
   a'16-> g f e d f d b |
-  a'16-> g f e d'->_\crescendo c b a-.\) |
-  a16( g f e-.) e->( d c b-.) |
+  a'16->-\rfinger"4" g f e d'->_\crescendo c b a-.\) |
+  a16-\rfinger"4"( g f e-.) e->-\rfinger"4"( d c b-.) |
   \stemUp c16-2\f-\shape #'((0 . 0) (1 . 2) (0 . 2) (0 . 2))^\( e-4 g,-1 c-5 e,-2 g-3 c,-1 e-2 |\break
   
   <<
     { \stemUp g16^.-3\) c^.-1 e^.-1-3 g^.-3-5 g^.-2-4^( f^.) e^.-2-4 d^. }
     \new Voice { \stemDown s8 c16 e e d c b }
   >> |
-  \stemNeutral c16\( e g, c e, g c, e |
+  \stemNeutral c16-\rfinger"2"\( e-\rfinger"4" g,-\rfinger"1" c-\rfinger"5" e,-\rfinger"2" g-\rfinger"3" c,-\rfinger"1" e-\rfinger"2" |
   <<
     { \voiceOne g16\) c^. e^. g^. g^.^( f^.) e^. d^. }
     \new Voice { \voiceTwo s8 c16 e e d c b }
   >> |
-  \oneVoice c8-. <e g c>-. <e, c'>-. q-. |
+  \oneVoice c8-.-\rfinger"1" <e g c>-.-\rfinger"1"-\rfinger"2"-\rfinger"5" <e, c'>-. q-. |
   q4-- r |\bar "|."
 }
 
@@ -149,7 +149,7 @@ lower = \relative c {
   g,16 d' b d b,_\crescendo g' d g |
   c,16 a' e a cis,-5 a' e a |
   d,8-. r r4 |
-  \clef treble <e' g>8-.-3-4 q-. <c e>-. r |
+  \clef treble <e' g>8-._\rfinger"3"_\rfinger"1" q-. <c e>-._\rfinger"3"_\rfinger"5" r |
   <d fis>8-.-2-1 q-. <b d>-. r |\break
   
   \clef bass
@@ -172,13 +172,13 @@ lower = \relative c {
   
   \stemNeutral <a' c>8-. q-. <f a>-. r |
   <g b>8-. q-. <e g>-. r |
-  f4.\( d8 |
+  f4._\rfinger"3"\( d8 |
   g8-.\) r r4 |
   <a c>8-. q-. <d, f>-. r |\break\pageBreak
   
-  <g b>8-. q-. <c, e>-. r |
-  <f a>4.\( <g f'>8 |
-  <c e>8-.\) c,-. <c' e>-.-3-1\mp q-. |
+  <g b>8-._\rfinger"1"_\rfinger"2" q-. <c, e>-._\rfinger"3"_\rfinger"5" r |
+  <f a>4._\rfinger"3"_\rfinger"5"\( <g f'>8_\rfinger"1"_\rfinger"4" |
+  <c e>8-._\rfinger"1"_\rfinger"2"\) c,-. <c' e>-.-3-1\mp q-. |
   <a c>8-. r <b d>-.-2-1 q-. |
   <gis b>8-.-4-2 r r4 |\break
   
@@ -198,12 +198,12 @@ lower = \relative c {
   e,8-. r r4 |\break
   
   e'16-2\p( dis f e-.) r4 |
-  e16( dis f e-.) <e, c'>8-.-4-1\mp q-. |
+  e16-\rfinger"2"( dis f e-.) <e, c'>8-.-4-1\mp q-. |
   <c a'>8-.-5-2 r <d b'>-.-4-1 q |
   <b gis'>8-._2_5 r <gis' b>4->_2_4_\( |
   <<
-    { <a c!>8[ <b d>-4-2 c cis_2]\) }
-    \new Voice { s4 \stemUp e4 }
+    { <a c!>8-\rfinger"3"-\rfinger"1"[ <b d>-4-2 <c-\rfinger"3"> cis_2]\) }
+    \new Voice { s4 \stemUp e4-\rfinger"1" }
   >>|\break
   
   \clef treble 
@@ -220,11 +220,11 @@ lower = \relative c {
   a16-4 c e c e, b' d b |
   a16 c e c e,_\crescendo b' d b |\break\pageBreak
   
-  \clef treble a16 c e c g! d' f d |
+  \clef treble a16_\rfinger"4" c e c g! d' f d |
   r4\fermata r |
   \clef bass <a c>8-.\p q-. <f a>-. r |
   <g b>8-. q-. <e g>-. r |
-  f4.\( d8 |\break
+  f4._\rfinger"3"\( d8 |\break
   
   g8-.\) r r4 |
   <a c>8-. q-. <d, f>-. r |
@@ -243,7 +243,7 @@ lower = \relative c {
   c16-3\f-\shape #'((0 . 0) (1 . 2) (0 . 2) (0 . 2))\( e-1 g,-4 c-1 e,-4 g-1 c,-4 e-2 |\break
   
   g8-.\) r g,-. r |
-  c'16_2\( e g, c e, g c, e |
+  c'16_2\( e g, c e,_\rfinger"4" g_\rfinger"1" c,_\rfinger"4" e_\rfinger"2" |
   g8-.\) r g, r |
   <c, c'>8-. <e e'>-. <g g'>-. <e e'>-. |
   <c c'>4-- r |\bar "|."
