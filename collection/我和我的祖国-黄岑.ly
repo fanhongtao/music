@@ -98,13 +98,13 @@ Off=\sustainOff
 Switch=\sustainOff\sustainOn
 
 lower_repeat = \relative c {
-  c,16_5 g'_2 c_1 e_4 g_2 c_1 e4. |
-  g,,16_5 d'_2 g_1 b_4 d_2 r16 <g,, g'>8 <f f'> <d d'> |\break
+  c,16_5\Switch g'_2 c_1 e_4 g_2 c_1 e4. |
+  g,,16_5\Switch d'_2 g_1 b_4 d_2 r16 <g,, g'>8 <f f'> <d d'> |\break
   
-  c16 g' c e g c e4. |
-  g,,16 d' g b d r a16_2 b a g f e |
-  g'8_1\( f e d4._4\) |
-  b8_3\( a g e'4._1\) |\break
+  c16\Switch g' c e g c e4. |
+  g,,16\Switch d' g b d r a16_2 b a g f e |
+  g'8_1\Switch\( f e d4._4\) |
+  b8_3\Switch\( a g e'4._1\) |\break
 }
 
 lower = \relative c {
@@ -146,7 +146,7 @@ lower = \relative c {
     a8_5\Switch c_4 e_2 a_1 e c |\break
     
     <g-5 b-4 d-2 f-1>2.\Switch\arpeggio |
-    c4 g'8\Switch~ \stemDown g <f, f'> <d d'> \stemNeutral |\bar"||"
+    c4\Switch g'8~ \stemDown g <f, f'> <d d'> \stemNeutral |\bar"||"
     \lower_repeat
     
     <g' d' g>4.\Switch <g, d' g> |
@@ -191,7 +191,9 @@ lower = \relative c {
     \new Staff = "upper" \upper
     \new Staff = "lower" \lower
   >>
-  \midi { }
+  \midi {
+    \tempo 8 = 120
+  }
 }
 
 \markup { \override #'(font-name . "楷体") \column {
