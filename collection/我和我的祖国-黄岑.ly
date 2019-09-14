@@ -2,6 +2,7 @@
 
 songName = "我和我的祖国"
 \include "../lib/paper-footer.ily"
+\include "../lib/repeat.ily"
 
 \header {
   title = \songName
@@ -13,6 +14,17 @@ keyTime = {
   \key c \major
   \time 6/8
   \numericTimeSignature
+}
+
+
+upper_repeat = \relative c'' {
+  <c c'>8\( <d d'> <e e'> <d d'> <c c'> <a a'> |
+  <b b'>8 <a a'> <f f'> <g g'>16\) e f g a b |\break
+  
+  <c c'>8\( <d d'> <e e'> <d d'> <c c'> <a a'> |
+  b'8 g8. e16 a4.\) |
+  <b, d>4. q8 <c e> <d f> |
+  <e g>4. <a, c>8 <b d> <c e> |\break 
 }
 
 upper = \relative c'' {
@@ -48,22 +60,17 @@ upper = \relative c'' {
     g8\( a g f e d |
     c4. g\) |\break\pageBreak
     
-    c8\( e c' b e8. c16 |
+    c8\( e c' b d8. c16 |
     a2.\) |
     c8\( b a g4.\) |
     a8\( g f e4.\) |\break
     
-    b4\( a8 g4 d'8 \bar "||"\mark \markup { \musicglyph #"scripts.segno" }
-    c8 e f g a b\) |
-    <c, c'>8\( <d d'> <e e'> <d d'> <c c'> <a a'> |
-    <b b'>8 <a a'> <f f'> <g g'>16\) e f g a b |\break
+    b4\( a8 g4 d'8 |
+    c8 e f g a b\) |\bar "||"\mark \markup { \musicglyph #"scripts.segno" }
+    \upper_repeat
+    \toCoda-mark
     
-    <c c'>8\( <d d'> <e e'> <d d'> <c c'> <a a'> |
-    b'8 g8. e16 a4.\) |
-    <b, d>4. q8 <c e> <d f> |
-    <e g>4. <a, c>8 <b d> <c e> |\break
-    
-    <d f>4.\( <g, b d>4 c8 |
+    <d, f>4.\( <g, b d>4 c8 |
   }
   \alternative {
     {
@@ -71,14 +78,27 @@ upper = \relative c'' {
       q2. |
     }
     {
-      q16 e16 f g a b c e f g a b |\break
+      q16 e16 f g a b c e f g a b |\bar"||" \once \override Score.RehearsalMark.direction = #DOWN \dsalCoda-mark \break
+      \tag #'midi {
+        \upper_repeat
+      }
     }
   }
   
-  <b, d g>4. <g' b d>4\fermata <c, c'>8 |
+  <b, d g>4.\coda <g' b d>4\fermata <c, c'>8 |
   <c e g c>2. |
   f,16 gis c f gis c <c,, gis' c e gis c>4.\fermata
   |\bar "|."
+}
+
+lower_repeat = \relative c {
+  c,16 g' c e g c e4. |
+  g,,16 d' g b r8 g, f d |\break
+  
+  c16 g' c e g c e4. |
+  g,,16 d' g b r8 a16 b a g f e |
+  g'8\( f e d4.\) |
+  b8\( a g e'4.\) |\break
 }
 
 lower = \relative c {
@@ -118,17 +138,11 @@ lower = \relative c {
     e,8 b' e g e b |
     a8 c e a e c |\break
     
-    <g b d f>2.\arpeggio |\bar"||"
-    c4 g'8~ \stemDown g <f, f'> <d d'> \stemNeutral |
-    c16 g' c e g c e4. |
-    g,,16 d' g b r8 g, f d |\break
+    <g b d f>2.\arpeggio |
+    c4 g'8~ \stemDown g <f, f'> <d d'> \stemNeutral |\bar"||"
+    \lower_repeat
     
-    c16 g' c e g c e4. |
-    g,,16 d' g b r8 a16 b a g f e |
-    g'8\( f e d4.\) |
-    b8\( a g e'4.\) |\break
-    
-    <g, d' g>4. <g, d' g> |
+    <g' d' g>4. <g, d' g> |
   }
   \alternative {
     {
@@ -137,6 +151,9 @@ lower = \relative c {
     }
     {
       <c c'>8 <bes bes'> <a a'> <g g'> <f f'> <e e'> |
+      \tag #'midi {
+        \lower_repeat
+      }
     }
   }
   <g' d' g>4. g,8 <d' g>~ q |
