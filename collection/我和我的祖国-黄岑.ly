@@ -6,8 +6,8 @@ songName = "我和我的祖国"
 
 \header {
   title = \songName
-  composer = "秦咏诚 作曲"
-  arranger = "黄 岑 编曲"
+  composer = "秦咏诚 曲"
+  arranger = "黄岑 改编"
 }
 
 keyTime = {
