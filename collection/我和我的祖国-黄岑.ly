@@ -5,7 +5,7 @@ songName = "我和我的祖国"
 \include "../lib/repeat.ily"
 
 \header {
-  title = \songName
+  title = \markup { \fontsize #2 \songName }
   composer = "秦咏诚 曲"
   arranger = "黄岑 改编"
 }
@@ -30,7 +30,7 @@ upper_repeat = \relative c'' {
 upper = \relative c'' {
   \clef treble
   \keyTime
-  \tempo "深情地" 8=150
+  \tempo "深情地 （中板）"
   \override Hairpin.to-barline = ##f
   \set fingeringOrientations = #'(right)
   
