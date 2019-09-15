@@ -88,7 +88,7 @@ upper = \relative c'' {
   
   <b,-1 d-2 g-5>4.->\coda <g'-1 b-2 d-4>4->\fermata <c, c'>8-> |
   <c-1 e-2 g-3 c-5>2.-> |
-  s4. <c, e gis c c'>4.\ff\fermata^\markup{\translate #'(3 . 1)"l.h."}
+  s4. <e, gis c c'>4.\ff\fermata^\markup{\translate #'(3 . 1)"l.h."}
   |\bar "|."
 }
 
@@ -167,7 +167,7 @@ lower = \relative c {
   \once \override DynamicLineSpanner.Y-offset = #-7
   c,16_5_\<\Switch g'_2 c_1 e_4 g_2 c_1 c,,_5 f_3 gis_2 c_1 f_3 gis_2 |
   \change Staff = "upper" c16_1^\markup {"l.h."} f_3 gis_2 c-1^\markup {"r.h."} f-2 gis-3\!
-  \change Staff = "lower" <c,,,, c' e gis>4.\Off |
+  \change Staff = "lower" <c,,,, c' e gis c>4.\Off |
   
   \bar "|."
 }
