@@ -88,7 +88,7 @@ upper = \relative c'' {
   
   <b,-1 d-2 g-5>4.->\coda <g'-1 b-2 d-4>4->\fermata <c, c'>8-> |
   <c-1 e-2 g-3 c-5>2.-> |
-  s4. <c, gis' c e gis c>4.\ff\fermata^\markup{\translate #'(3 . 1)"l.h."}
+  s4. <c, e gis c c'>4.\ff\fermata^\markup{\translate #'(3 . 1)"l.h."}
   |\bar "|."
 }
 
@@ -164,9 +164,10 @@ lower = \relative c {
     }
   }
   <g' d' g>4.\Switch g,8 <d' g>~ q |
+  \once \override DynamicLineSpanner.Y-offset = #-7
   c,16_5_\<\Switch g'_2 c_1 e_4 g_2 c_1 c,,_5 f_3 gis_2 c_1 f_3 gis_2 |
   \change Staff = "upper" c16_1^\markup {"l.h."} f_3 gis_2 c-1^\markup {"r.h."} f-2 gis-3\!
-  \change Staff = "lower" <c,,,, c' g'>4.\Off |
+  \change Staff = "lower" <c,,,, c' e gis>4.\Off |
   
   \bar "|."
 }
@@ -203,3 +204,9 @@ lower = \relative c {
     } 2019.9.10 沈阳 }
 } }
 \markup { \vspace #2 }
+
+% 最后一个音的弹法：
+% 1. 左手先弹一个八度 do-do，
+% 2. 左手平移弹 mi, sol, do， 
+% 3. 右手 mi, sol, do， 
+% 4. 最后是左手弹do
