@@ -20,7 +20,7 @@ keyTime = {
 
 upper_repeat = \relative c'' {
   <c c'>8\f\( <d d'> <e e'> <d d'> <c c'> <a a'> |
-  <b b'>8 <a a'> <f f'> <g g'>16\) e'-3\< f g a-1 b\! |\break
+  <b b'>8 <a a'> <e e'> <g g'>16\) e'-3\< f g a-1 b\! |\break
   
   <c, c'>8\ff\( <d d'> <e e'> <d d'> <c c'> <a a'> |
   b'8-5 g8. e16 a4.-4\) |
@@ -100,10 +100,10 @@ Switch=\sustainOff\sustainOn
 
 lower_repeat = \relative c {
   <c, c'>4\Switch <e' g c>8 q4. |
-  <g, g'>4\Switch <g' b f'>8 q4. |\break
+  <g, g'>4\Switch <d' g b>8 q4. |\break
   
-  <c,, c'>4\Switch <e' g c>8 q4. |
-  <g, g'>4\Switch <e' g b>8 a f e |
+  <c, c'>4\Switch <e' g c>8 q4. |
+  <e, e'>4\Switch <e' g b>8 a f e |
   g'8_1\Switch\( f e d4._4\) |
   b8_3\Switch\( a g e'4._1\) |\break
 }
@@ -128,8 +128,8 @@ lower = \relative c {
   c,4\Switch g'8 c4 g8 |
   c,4\Switch g'8 c4 g8 |
   \repeat volta 2 {
-    c,4_5\Switch g'8_1 g,4_5 d'8_1 |
-    e4_5\Switch g8_4 c4_1 b8_2 |\break
+    c,4_5\Switch g'8_1 g,4_5 d'8_2 |
+    c4_5\Switch g'8_2 c4_1 b8_2 |\break
     
     e,4_5\Switch a8_2 e'4_1 e,8_5 |
     g,4_5\Switch a'8_2 b4_1 g8_2 |
@@ -142,7 +142,7 @@ lower = \relative c {
     c4\Switch g'8 c4 b8 |\break\pageBreak
     
     e,4_5\Switch a8_2  e'4_1 a,8_2 |
-    f,8_5\Switch c'_2 f_1 a4._2 |
+    f,8_5\Switch c'_2 f_1 a4_2 f8 |
     <e,-5 b'-2 e-1 g-2>2.\arpeggio\Switch |
     <a c e a>2.\arpeggio\Switch |\break
     
@@ -158,7 +158,7 @@ lower = \relative c {
       c,4\Switch g'8 c4 g8 |
     }
     {
-      <c, c'>8\Switch <bes bes'> <a a'> <g g'> <f f'> <e e'> |
+      <c, c'>8\Switch <bes bes'> <a a'> <g g'> <f f'> <d d'> |
       \tag #'midi {
         \lower_repeat
       }
