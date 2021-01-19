@@ -82,3 +82,13 @@ text = \lyricmode {
   \line { * \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/creating-titles-headers-and-footers#default-layout-of-bookpart-and-score-titles" { Default layout of bookpart and score titles } - Header中的变量 }
   \line { * \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/custom-titles-headers-and-footers#custom-layout-for-headers-and-footers" { footer } - 自定义 footer }
 } }
+
+\markup { \vspace #1 }
+
+\markup {  \override #'(font-name . "楷体") \column {
+  \line { 常用技巧说明：}
+  \line { * \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/inside-the-staff#fingering-instructions" {Fingering instructions} - 标注指法 }
+  \line { * \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/formatting-text#text-alignment" {Text alignment} - 移动 markup 命令生成的文字 }
+  \line { * \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/modifying-shapes" {Modifying shapes} - 变更 slur 曲线 }
+  \line { * \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/aligning-objects" {Aligning objects} - 移动绘制的对象，如： \with-url #"http://lilypond.org/doc/v2.18/Documentation/notation/expressive-marks-attached-to-notes#dynamics" {Dynamics} }
+} }
