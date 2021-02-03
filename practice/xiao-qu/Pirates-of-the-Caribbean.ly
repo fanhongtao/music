@@ -147,7 +147,7 @@ upper = \relative c'' {
     d,,,, 4.
   }
   \tag #'midi { 
-    \tuplet 29/24 { d32 c b a g f e d c b a g f e d c b a g f e d c b a g f e d }
+    \relative c'' { \tuplet 29/24 { d''32 c b a g f e d c b a g f e d c b a g f e d c b a g f e d } }
   }
   s4. |
   \ottava 0
